@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mente Afiada - Sanjay Gupta | AQPI</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .resenha-completa {
+            padding: 100px 0 80px;
+            margin-top: 70px;
+        }
+        
+        .resenha-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+        
+        .resenha-header h1 {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .resenha-header .autor-livro {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 2rem;
+        }
+        
+        .resenha-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        
+        .resenha-info span {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+        
+        .resenha-destaque {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #2c5068 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+        
+        .resenha-destaque h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .resenha-destaque p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+        
+        .resenha-conteudo {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .resenha-conteudo h2 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin: 3rem 0 1.5rem;
+        }
+        
+        .resenha-conteudo h3 {
+            font-size: 1.6rem;
+            color: var(--secondary-color);
+            margin: 2.5rem 0 1rem;
+        }
+        
+        .resenha-conteudo p {
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+        }
+        
+        .resenha-conteudo ul {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+        
+        .resenha-conteudo li {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .resenha-conteudo li strong {
+            color: var(--primary-color);
+        }
+        
+        .pilares-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .pilar-card {
+            background-color: var(--background-light);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .pilar-card h4 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .pilar-card p {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+        
+        .publico-alvo {
+            background-color: var(--background-light);
+            padding: 2.5rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+        }
+        
+        .publico-alvo h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .quote-destaque {
+            border-left: 4px solid var(--secondary-color);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            background-color: var(--background-light);
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--text-dark);
+        }
+        
+        .conclusao {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+        }
+        
+        .conclusao h2 {
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .conclusao p {
+            color: white;
+            font-size: 1.15rem;
+            line-height: 1.8;
+        }
+        
+        .avaliacao {
+            text-align: center;
+            margin: 3rem 0;
+            padding: 2rem;
+            background-color: var(--background-light);
+            border-radius: 15px;
+        }
+        
+        .avaliacao h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .estrelas {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin: 1rem 0;
+        }
+        
+        .voltar-btn {
+            display: inline-block;
+            margin-top: 3rem;
+            padding: 1rem 2rem;
+            background-color: var(--secondary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .voltar-btn:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .resenha-header h1 {
+                font-size: 2rem;
+            }
+            
+            .resenha-conteudo h2 {
+                font-size: 1.8rem;
+            }
+            
+            .pilares-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-content">
+                    <a href="index.html" class="logo">
+                        <img src="aqpi__1_.png" alt="AQPI Logo" class="logo-img">
+                    </a>
+                    <button class="menu-toggle" id="menuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="index.html#home" class="nav-link">Início</a></li>
+                        <li><a href="index.html#resenhas" class="nav-link active">Resenhas</a></li>
+                        <li><a href="index.html#trocas" class="nav-link">Trocas</a></li>
+                        <li><a href="index.html#sobre" class="nav-link">Sobre</a></li>
+                        <li><a href="index.html#contato" class="nav-link">Contato</a></li>
+                        <li><a href="#" class="btn-login">Entrar</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Resenha Completa -->
+    <section class="resenha-completa">
+        <div class="container">
+            <div class="resenha-conteudo">
+                <!-- Header da Resenha -->
+                <div class="resenha-header">
+                    <span class="resenha-categoria">Não-ficção</span>
+                    <h1>Mente Afiada</h1>
+                    <p class="autor-livro">Dr. Sanjay Gupta</p>
+                    <div class="resenha-info">
+                        <span>📚 Neurociência • Saúde</span>
+                        <span>✍️ Por Equipe AQPI</span>
+                        <span>📅 09 de Novembro, 2025</span>
+                    </div>
+                </div>
+
+                <!-- Gancho Inicial -->
+                <div class="resenha-destaque">
+                    <h2>🧠 O Declínio Cognitivo NÃO é Inevitável</h2>
+                    <p>Você teme aquele momento em que a memória começa a falhar? Aquele instante em que o nome de um conhecido some da ponta da língua ou você esquece onde deixou as chaves? O medo do declínio cognitivo é uma das maiores preocupações do envelhecimento. Mas e se essa deterioração não for uma sentença?</p>
+                </div>
+
+                <!-- Introdução -->
+                <p>O neurocirurgião <strong>Dr. Sanjay Gupta</strong>, em "Mente Afiada", nos entrega um manual de esperança e ciência, argumentando que um cérebro vibrante e saudável é uma meta alcançável em qualquer idade.</p>
+
+                <p>A premissa do livro é direta e poderosa: <strong>o declínio do cérebro não é inevitável</strong>. Gupta desconstrói mitos comuns sobre o envelhecimento e apresenta um programa prático, baseado nas mais recentes descobertas científicas, para não apenas proteger o cérebro, mas também para fortalecê-lo e melhorar sua resiliência.</p>
+
+                <!-- Os Cinco Pilares -->
+                <h2>Os Cinco Pilares de uma Mente Afiada</h2>
+                
+                <p>Através de <strong>"cinco pilares"</strong>, o autor mostra como hábitos diários relacionados a movimento, alimentação, sono, relaxamento e conexão social podem reverter os efeitos do tempo e otimizar nossa função cognitiva para o resto da vida:</p>
+
+                <div class="pilares-grid">
+                    <div class="pilar-card">
+                        <h4>🏃 1. Movimento</h4>
+                        <p>O exercício físico regular não apenas mantém o corpo saudável, mas é fundamental para a saúde cerebral, estimulando a neurogênese e melhorando a memória.</p>
+                    </div>
+                    
+                    <div class="pilar-card">
+                        <h4>🥗 2. Alimentação</h4>
+                        <p>Uma dieta rica em nutrientes específicos protege o cérebro contra inflamação e estresse oxidativo, dois dos principais vilões do declínio cognitivo.</p>
+                    </div>
+                    
+                    <div class="pilar-card">
+                        <h4>😴 3. Sono</h4>
+                        <p>O sono de qualidade é essencial para a consolidação da memória e limpeza de toxinas cerebrais que se acumulam durante o dia.</p>
+                    </div>
+                    
+                    <div class="pilar-card">
+                        <h4>🧘 4. Relaxamento</h4>
+                        <p>O gerenciamento do estresse através de técnicas de relaxamento protege o cérebro dos efeitos nocivos do cortisol elevado.</p>
+                    </div>
+                    
+                    <div class="pilar-card">
+                        <h4>👥 5. Conexão Social</h4>
+                        <p>Relacionamentos significativos e interações sociais regulares são tão importantes para a saúde cerebral quanto qualquer outro fator.</p>
+                    </div>
+                </div>
+
+                <!-- Destaques do Livro -->
+                <h2>Destaques e Diferenciais</h2>
+
+                <h3>Ciência Acessível</h3>
+                <p>Gupta tem o dom de transformar conceitos complexos de neurociência em explicações claras e envolventes. Ele utiliza casos reais de pacientes, estudos científicos e sua própria experiência como neurocirurgião para ilustrar seus pontos.</p>
+
+                <div class="quote-destaque">
+                    "O cérebro é moldável e adaptável em qualquer idade. A neuroplasticidade não é privilégio da juventude."
+                </div>
+
+                <h3>Programa de 12 Semanas</h3>
+                <p>O livro não é apenas teoria. Gupta apresenta um <strong>programa estruturado de 12 semanas</strong> com ações práticas e mensuráveis que você pode implementar imediatamente. Cada semana foca em aspectos específicos dos cinco pilares, construindo gradualmente novos hábitos sustentáveis.</p>
+
+                <h3>Baseado em Evidências</h3>
+                <p>Todas as recomendações são fundamentadas nas mais recentes pesquisas científicas. O autor não promete milagres, mas sim resultados realistas alcançáveis através de mudanças consistentes no estilo de vida.</p>
+
+                <h3>Esperança Realista</h3>
+                <p>Para aqueles preocupados com o Alzheimer e outras formas de demência, o livro oferece uma mensagem de esperança sem ser enganoso. Gupta explica claramente o que podemos controlar e o que está além do nosso alcance, sempre enfatizando que mesmo pequenas mudanças podem ter impactos significativos.</p>
+
+                <!-- Público-Alvo -->
+                <div class="publico-alvo">
+                    <h3>📖 Para Quem é Este Livro?</h3>
+                    <ul>
+                        <li><strong>Profissionais e Estudantes:</strong> Qualquer pessoa que dependa de agilidade mental, foco e boa memória para se destacar em sua carreira ou nos estudos.</li>
+                        
+                        <li><strong>Pessoas de meia-idade e idosos:</strong> Indivíduos preocupados com a perda de memória e que buscam estratégias práticas e preventivas contra o declínio cognitivo e doenças como o Alzheimer.</li>
+                        
+                        <li><strong>Cuidadores e Familiares:</strong> Pessoas que cuidam de parentes com demência ou Alzheimer e buscam entender melhor a doença, além de encontrar esperança e estratégias de apoio.</li>
+                        
+                        <li><strong>Interessados em:</strong> Saúde e bem-estar, neurociência, longevidade e desenvolvimento pessoal.</li>
+                    </ul>
+                </div>
+
+                <!-- Pontos Fortes e Fracos -->
+                <h2>Pontos Fortes</h2>
+                <ul>
+                    <li><strong>Abordagem científica rigorosa:</strong> Todas as recomendações são baseadas em pesquisas sólidas.</li>
+                    <li><strong>Linguagem acessível:</strong> Conceitos complexos explicados de forma clara.</li>
+                    <li><strong>Plano prático:</strong> Programa de 12 semanas com ações concretas.</li>
+                    <li><strong>Mensagem inspiradora:</strong> Oferece esperança realista sem promessas vazias.</li>
+                    <li><strong>Holístico:</strong> Aborda múltiplos aspectos da saúde cerebral.</li>
+                </ul>
+
+                <h2>Pontos de Atenção</h2>
+                <ul>
+                    <li><strong>Pode ser repetitivo:</strong> Alguns conceitos são reiterados múltiplas vezes ao longo do livro.</li>
+                    <li><strong>Foco americano:</strong> Alguns exemplos e recursos são específicos dos Estados Unidos.</li>
+                    <li><strong>Requer comprometimento:</strong> O programa de 12 semanas exige dedicação e mudanças significativas no estilo de vida.</li>
+                </ul>
+
+                <!-- Avaliação -->
+                <div class="avaliacao">
+                    <h3>Nossa Avaliação</h3>
+                    <div class="estrelas">★★★★★</div>
+                    <p><strong>5/5 estrelas</strong></p>
+                    <p>Um guia essencial e transformador para qualquer pessoa que deseja proteger e otimizar sua saúde cerebral</p>
+                </div>
+
+                <!-- Conclusão -->
+                <div class="conclusao">
+                    <h2>Veredicto Final</h2>
+                    <p><strong>"Mente Afiada"</strong> é mais do que um livro sobre saúde cerebral - é um manifesto de empoderamento pessoal. Dr. Sanjay Gupta nos mostra que não somos vítimas passivas do envelhecimento cognitivo, mas arquitetos ativos de nossa saúde mental.</p>
+                    
+                    <p>Se você está preocupado com sua memória, quer melhorar seu foco e concentração, ou simplesmente deseja garantir que seu cérebro continue vibrante pelos próximos 20, 30, 40 anos, este livro é uma leitura obrigatória.</p>
+                    
+                    <p>A mensagem central é clara e libertadora: <strong>você tem mais controle sobre a saúde do seu cérebro do que imagina</strong>. E nunca é tarde demais para começar.</p>
+                </div>
+
+                <!-- Citação Final -->
+                <div class="quote-destaque">
+                    "Cada escolha que você faz hoje - desde o que você come no café da manhã até quanto você se move - está moldando o cérebro que você terá amanhã."
+                </div>
+
+                <!-- Call to Action -->
+                <div style="text-align: center; margin: 3rem 0;">
+                    <p style="font-size: 1.2rem; color: var(--text-dark); margin-bottom: 2rem;">
+                        <strong>Já leu "Mente Afiada"? Compartilhe sua experiência conosco!</strong>
+                    </p>
+                    <a href="index.html#contato" class="btn btn-primary">Enviar sua Resenha</a>
+                </div>
+
+                <!-- Botão Voltar -->
+                <div style="text-align: center;">
+                    <a href="index.html#resenhas" class="voltar-btn">← Voltar para Resenhas</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="aqpi__1_.png" alt="AQPI Logo" class="footer-logo">
+                    <p>Conectando leitores a livros que transformam vidas.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html#home">Início</a></li>
+                        <li><a href="index.html#resenhas">Resenhas</a></li>
+                        <li><a href="index.html#trocas">Trocas</a></li>
+                        <li><a href="index.html#sobre">Sobre</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Comunidade</h4>
+                    <ul>
+                        <li><a href="#">Como Funciona</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="index.html#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Receba nossas resenhas semanais</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Seu email">
+                        <button type="submit" class="btn btn-small">Inscrever</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AQPI. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
