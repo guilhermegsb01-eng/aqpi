@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQPI - Conectando Leitores e Livros</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-content">
+                    <a href="index.html" class="logo">
+                        <img src="aqpi__1_.png" alt="AQPI Logo" class="logo-img">
+                    </a>
+                    <button class="menu-toggle" id="menuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="#home" class="nav-link active">Início</a></li>
+                        <li><a href="#resenhas" class="nav-link">Resenhas</a></li>
+                        <li><a href="#trocas" class="nav-link">Trocas</a></li>
+                        <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                        <li><a href="#contato" class="nav-link">Contato</a></li>
+                        <li><a href="#" class="btn-login">Entrar</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Conectando Leitores a Livros que Transformam</h1>
+                <p class="hero-subtitle">Descubra resenhas autênticas e troque livros com outros apaixonados pela leitura</p>
+                <div class="hero-buttons">
+                    <a href="#resenhas" class="btn btn-primary">Explorar Resenhas</a>
+                    <a href="#trocas" class="btn btn-secondary">Ver Trocas</a>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <h3>500+</h3>
+                    <p>Resenhas</p>
+                </div>
+                <div class="stat">
+                    <h3>1.200+</h3>
+                    <p>Livros para Troca</p>
+                </div>
+                <div class="stat">
+                    <h3>3.000+</h3>
+                    <p>Leitores</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Missão Section -->
+    <section class="missao">
+        <div class="container">
+            <div class="missao-content">
+                <h2 class="section-title">Nossa Missão</h2>
+                <p class="missao-text">No AQPI, nossa missão é conectar leitores a livros que realmente interessam. Acreditamos que cada livro tem o poder de transformar vidas e queremos facilitar esse acesso através de resenhas honestas e uma comunidade de trocas ativa.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resenhas Section -->
+    <section class="resenhas" id="resenhas">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Últimas Resenhas</h2>
+                <p class="section-subtitle">Análises periódicas feitas por leitores apaixonados</p>
+            </div>
+            <div class="resenhas-grid">
+                <!-- Resenha Card 1 -->
+                <article class="resenha-card">
+                    <div class="resenha-image">
+                        <div class="placeholder-image">🧠</div>
+                    </div>
+                    <div class="resenha-content">
+                        <span class="resenha-categoria">Não-ficção</span>
+                        <h3 class="resenha-titulo">Mente Afiada - Sanjay Gupta</h3>
+                        <p class="resenha-excerpt">Você teme o declínio cognitivo? Dr. Sanjay Gupta apresenta um programa científico provando que um cérebro vibrante é alcançável em qualquer idade. Através de cinco pilares práticos, ele mostra como reverter os efeitos do tempo...</p>
+                        <div class="resenha-meta">
+                            <span class="resenha-autor">Por Equipe AQPI</span>
+                            <span class="resenha-data">09 Nov 2025</span>
+                        </div>
+                        <a href="resenha-mente-afiada.html" class="resenha-link">Ler resenha completa →</a>
+                    </div>
+                </article>
+
+                <!-- Resenha Card 2 -->
+                <article class="resenha-card">
+                    <div class="resenha-image">
+                        <div class="placeholder-image">📚</div>
+                    </div>
+                    <div class="resenha-content">
+                        <span class="resenha-categoria">Romance</span>
+                        <h3 class="resenha-titulo">Orgulho e Preconceito</h3>
+                        <p class="resenha-excerpt">Jane Austen cria personagens inesquecíveis neste clássico sobre amor, sociedade e autodescoberta...</p>
+                        <div class="resenha-meta">
+                            <span class="resenha-autor">Por Carlos Mendes</span>
+                            <span class="resenha-data">03 Nov 2025</span>
+                        </div>
+                        <a href="#" class="resenha-link">Ler resenha completa →</a>
+                    </div>
+                </article>
+
+                <!-- Resenha Card 3 -->
+                <article class="resenha-card">
+                    <div class="resenha-image">
+                        <div class="placeholder-image">📕</div>
+                    </div>
+                    <div class="resenha-content">
+                        <span class="resenha-categoria">Fantasia</span>
+                        <h3 class="resenha-titulo">O Senhor dos Anéis</h3>
+                        <p class="resenha-excerpt">Tolkien constrói um universo complexo e envolvente. Uma jornada épica sobre amizade, coragem e sacrifício...</p>
+                        <div class="resenha-meta">
+                            <span class="resenha-autor">Por Maria Costa</span>
+                            <span class="resenha-data">01 Nov 2025</span>
+                        </div>
+                        <a href="#" class="resenha-link">Ler resenha completa →</a>
+                    </div>
+                </article>
+
+                <!-- Resenha Card 4 -->
+                <article class="resenha-card">
+                    <div class="resenha-image">
+                        <div class="placeholder-image">📗</div>
+                    </div>
+                    <div class="resenha-content">
+                        <span class="resenha-categoria">Não-ficção</span>
+                        <h3 class="resenha-titulo">Sapiens - Yuval Harari</h3>
+                        <p class="resenha-excerpt">Uma análise fascinante da história da humanidade. Harari nos faz repensar tudo que sabemos sobre nossa espécie...</p>
+                        <div class="resenha-meta">
+                            <span class="resenha-autor">Por João Santos</span>
+                            <span class="resenha-data">28 Out 2025</span>
+                        </div>
+                        <a href="#" class="resenha-link">Ler resenha completa →</a>
+                    </div>
+                </article>
+
+                <!-- Resenha Card 5 -->
+                <article class="resenha-card">
+                    <div class="resenha-image">
+                        <div class="placeholder-image">📘</div>
+                    </div>
+                    <div class="resenha-content">
+                        <span class="resenha-categoria">Suspense</span>
+                        <h3 class="resenha-titulo">O Código Da Vinci</h3>
+                        <p class="resenha-excerpt">Dan Brown entrega uma trama eletrizante repleta de mistérios, símbolos e reviravoltas inesperadas...</p>
+                        <div class="resenha-meta">
+                            <span class="resenha-autor">Por Paula Ferreira</span>
+                            <span class="resenha-data">25 Out 2025</span>
+                        </div>
+                        <a href="#" class="resenha-link">Ler resenha completa →</a>
+                    </div>
+                </article>
+
+                <!-- Resenha Card 6 -->
+                <article class="resenha-card">
+                    <div class="resenha-image">
+                        <div class="placeholder-image">📙</div>
+                    </div>
+                    <div class="resenha-content">
+                        <span class="resenha-categoria">Clássico</span>
+                        <h3 class="resenha-titulo">Dom Casmurro</h3>
+                        <p class="resenha-excerpt">Machado de Assis nos apresenta um dos maiores mistérios da literatura brasileira. Capitu traiu ou não?...</p>
+                        <div class="resenha-meta">
+                            <span class="resenha-autor">Por Ricardo Lima</span>
+                            <span class="resenha-data">22 Out 2025</span>
+                        </div>
+                        <a href="#" class="resenha-link">Ler resenha completa →</a>
+                    </div>
+                </article>
+            </div>
+            <div class="section-cta">
+                <a href="#" class="btn btn-primary">Ver Todas as Resenhas</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trocas Section -->
+    <section class="trocas" id="trocas">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Livros Disponíveis para Troca</h2>
+                <p class="section-subtitle">Encontre seu próximo livro e compartilhe os seus</p>
+            </div>
+            <div class="trocas-filter">
+                <button class="filter-btn active">Todos</button>
+                <button class="filter-btn">Ficção</button>
+                <button class="filter-btn">Romance</button>
+                <button class="filter-btn">Fantasia</button>
+                <button class="filter-btn">Suspense</button>
+                <button class="filter-btn">Não-ficção</button>
+            </div>
+            <div class="trocas-grid">
+                <!-- Troca Card 1 -->
+                <div class="troca-card">
+                    <div class="troca-image">
+                        <div class="placeholder-image">📖</div>
+                        <span class="troca-status disponivel">Disponível</span>
+                    </div>
+                    <div class="troca-content">
+                        <h3 class="troca-titulo">A Culpa é das Estrelas</h3>
+                        <p class="troca-autor">John Green</p>
+                        <div class="troca-info">
+                            <span class="troca-estado">📍 São Paulo, SP</span>
+                            <span class="troca-condicao">Estado: Ótimo</span>
+                        </div>
+                        <div class="troca-usuario">
+                            <span class="usuario-nome">Oferecido por Mariana</span>
+                        </div>
+                        <a href="#" class="btn btn-small">Propor Troca</a>
+                    </div>
+                </div>
+
+                <!-- Troca Card 2 -->
+                <div class="troca-card">
+                    <div class="troca-image">
+                        <div class="placeholder-image">📚</div>
+                        <span class="troca-status disponivel">Disponível</span>
+                    </div>
+                    <div class="troca-content">
+                        <h3 class="troca-titulo">Harry Potter - Coleção</h3>
+                        <p class="troca-autor">J.K. Rowling</p>
+                        <div class="troca-info">
+                            <span class="troca-estado">📍 Rio de Janeiro, RJ</span>
+                            <span class="troca-condicao">Estado: Bom</span>
+                        </div>
+                        <div class="troca-usuario">
+                            <span class="usuario-nome">Oferecido por Pedro</span>
+                        </div>
+                        <a href="#" class="btn btn-small">Propor Troca</a>
+                    </div>
+                </div>
+
+                <!-- Troca Card 3 -->
+                <div class="troca-card">
+                    <div class="troca-image">
+                        <div class="placeholder-image">📕</div>
+                        <span class="troca-status disponivel">Disponível</span>
+                    </div>
+                    <div class="troca-content">
+                        <h3 class="troca-titulo">O Pequeno Príncipe</h3>
+                        <p class="troca-autor">Antoine de Saint-Exupéry</p>
+                        <div class="troca-info">
+                            <span class="troca-estado">📍 Belo Horizonte, MG</span>
+                            <span class="troca-condicao">Estado: Ótimo</span>
+                        </div>
+                        <div class="troca-usuario">
+                            <span class="usuario-nome">Oferecido por Júlia</span>
+                        </div>
+                        <a href="#" class="btn btn-small">Propor Troca</a>
+                    </div>
+                </div>
+
+                <!-- Troca Card 4 -->
+                <div class="troca-card">
+                    <div class="troca-image">
+                        <div class="placeholder-image">📗</div>
+                        <span class="troca-status reservado">Reservado</span>
+                    </div>
+                    <div class="troca-content">
+                        <h3 class="troca-titulo">O Alquimista</h3>
+                        <p class="troca-autor">Paulo Coelho</p>
+                        <div class="troca-info">
+                            <span class="troca-estado">📍 Curitiba, PR</span>
+                            <span class="troca-condicao">Estado: Ótimo</span>
+                        </div>
+                        <div class="troca-usuario">
+                            <span class="usuario-nome">Oferecido por Lucas</span>
+                        </div>
+                        <a href="#" class="btn btn-small btn-disabled">Reservado</a>
+                    </div>
+                </div>
+
+                <!-- Troca Card 5 -->
+                <div class="troca-card">
+                    <div class="troca-image">
+                        <div class="placeholder-image">📘</div>
+                        <span class="troca-status disponivel">Disponível</span>
+                    </div>
+                    <div class="troca-content">
+                        <h3 class="troca-titulo">A Menina que Roubava Livros</h3>
+                        <p class="troca-autor">Markus Zusak</p>
+                        <div class="troca-info">
+                            <span class="troca-estado">📍 Porto Alegre, RS</span>
+                            <span class="troca-condicao">Estado: Bom</span>
+                        </div>
+                        <div class="troca-usuario">
+                            <span class="usuario-nome">Oferecido por Fernanda</span>
+                        </div>
+                        <a href="#" class="btn btn-small">Propor Troca</a>
+                    </div>
+                </div>
+
+                <!-- Troca Card 6 -->
+                <div class="troca-card">
+                    <div class="troca-image">
+                        <div class="placeholder-image">📙</div>
+                        <span class="troca-status disponivel">Disponível</span>
+                    </div>
+                    <div class="troca-content">
+                        <h3 class="troca-titulo">Cem Anos de Solidão</h3>
+                        <p class="troca-autor">Gabriel García Márquez</p>
+                        <div class="troca-info">
+                            <span class="troca-estado">📍 Brasília, DF</span>
+                            <span class="troca-condicao">Estado: Ótimo</span>
+                        </div>
+                        <div class="troca-usuario">
+                            <span class="usuario-nome">Oferecido por Rafael</span>
+                        </div>
+                        <a href="#" class="btn btn-small">Propor Troca</a>
+                    </div>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="#" class="btn btn-primary">Ver Todos os Livros</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Funciona Section -->
+    <section class="como-funciona">
+        <div class="container">
+            <h2 class="section-title">Como Funciona</h2>
+            <div class="funciona-grid">
+                <div class="funciona-card">
+                    <div class="funciona-icon">1</div>
+                    <h3>Cadastre-se</h3>
+                    <p>Crie sua conta gratuitamente e junte-se à nossa comunidade de leitores</p>
+                </div>
+                <div class="funciona-card">
+                    <div class="funciona-icon">2</div>
+                    <h3>Explore</h3>
+                    <p>Leia resenhas e encontre livros que combinam com você</p>
+                </div>
+                <div class="funciona-card">
+                    <div class="funciona-icon">3</div>
+                    <h3>Troque</h3>
+                    <p>Proponha trocas e compartilhe livros com outros leitores</p>
+                </div>
+                <div class="funciona-card">
+                    <div class="funciona-icon">4</div>
+                    <h3>Avalie</h3>
+                    <p>Escreva suas próprias resenhas e ajude outros leitores</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section class="sobre" id="sobre">
+        <div class="container">
+            <div class="sobre-content">
+                <h2 class="section-title">Sobre o AQPI</h2>
+                <p>O AQPI nasceu da paixão pela leitura e do desejo de criar uma comunidade onde leitores pudessem se conectar de forma autêntica. Acreditamos que livros têm o poder de transformar vidas, e queremos tornar essa transformação acessível a todos.</p>
+                <p>Nossa plataforma combina resenhas periódicas honestas com um sistema de trocas de livros, facilitando o acesso à leitura de qualidade. Cada resenha é escrita por leitores reais, cada troca fortalece nossa comunidade, e cada livro compartilhado multiplica o conhecimento.</p>
+                <div class="sobre-valores">
+                    <div class="valor">
+                        <h4>🤝 Comunidade</h4>
+                        <p>Construímos conexões reais entre leitores</p>
+                    </div>
+                    <div class="valor">
+                        <h4>📖 Acessibilidade</h4>
+                        <p>Facilitamos o acesso a livros de qualidade</p>
+                    </div>
+                    <div class="valor">
+                        <h4>💡 Autenticidade</h4>
+                        <p>Resenhas honestas de leitores reais</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section class="contato" id="contato">
+        <div class="container">
+            <div class="contato-content">
+                <div class="contato-info">
+                    <h2 class="section-title">Entre em Contato</h2>
+                    <p>Tem alguma dúvida, sugestão ou quer fazer parte da nossa comunidade? Envie-nos uma mensagem!</p>
+                    <div class="contato-details">
+                        <div class="contato-item">
+                            <span class="contato-icon">📧</span>
+                            <div>
+                                <h4>Email</h4>
+                                <p>contato@aqpi.com.br</p>
+                            </div>
+                        </div>
+                        <div class="contato-item">
+                            <span class="contato-icon">📱</span>
+                            <div>
+                                <h4>Redes Sociais</h4>
+                                <p>@aqpi_oficial</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contato-form">
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="assunto">Assunto</label>
+                        <input type="text" id="assunto" name="assunto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="aqpi__1_.png" alt="AQPI Logo" class="footer-logo">
+                    <p>Conectando leitores a livros que transformam vidas.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#resenhas">Resenhas</a></li>
+                        <li><a href="#trocas">Trocas</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Comunidade</h4>
+                    <ul>
+                        <li><a href="#">Como Funciona</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Receba nossas resenhas semanais</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Seu email">
+                        <button type="submit" class="btn btn-small">Inscrever</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AQPI. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
