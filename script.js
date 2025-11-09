@@ -155,17 +155,8 @@ propoeTrocaBtns.forEach(btn => {
     });
 });
 
-// Links de "Ler resenha completa"
-const resenhaLinks = document.querySelectorAll('.resenha-link');
-resenhaLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const card = link.closest('.resenha-card');
-        const titulo = card.querySelector('.resenha-titulo').textContent;
-        
-        alert(`Carregando resenha completa de "${titulo}"...\n\nEm breve teremos páginas individuais para cada resenha!`);
-    });
-});
+// Links de "Ler resenha completa" agora funcionam normalmente
+// Páginas individuais de resenha estão sendo criadas progressivamente
 
 // Smooth scroll para links internos
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
