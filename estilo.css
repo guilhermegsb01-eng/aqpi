@@ -174,11 +174,12 @@ h1, h2, h3, h4 {
     position: relative;
     z-index: 2;
     margin: 0 auto;
+    text-align: center;
 }
 }
 
 .hero-content {
-    text-align: center;
+    text-align: center !important;
     max-width: 800px;
     margin: 0 auto;
 }
