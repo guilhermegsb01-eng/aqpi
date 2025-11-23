@@ -211,9 +211,12 @@ const heroObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             const stats = document.querySelectorAll('.stat h3');
-            animateValue(stats[0], 0, 500, 2000);
-            animateValue(stats[1], 0, 1200, 2000);
-            animateValue(stats[2], 0, 3000, 2000);
+            // Animação para os números 1, 1, 2
+            if (stats.length >= 3) {
+                stats[0].innerHTML = '1';
+                stats[1].innerHTML = '1';
+                stats[2].innerHTML = '2';
+            }
             heroObserver.unobserve(entry.target);
         }
     });
