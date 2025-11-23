@@ -186,14 +186,26 @@ h1, h2, h3, h4 {
 .hero-title {
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
-    animation: pageFlip 2s ease-in-out;
     transform-style: preserve-3d;
-    transition: transform 0.3s ease;
     cursor: default;
 }
 
-.hero-title:hover {
-    transform: perspective(1000px) rotateY(2deg) translateY(-5px);
+.hero-title .palavra {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeInWord 0.8s ease forwards;
+    margin-right: 0.3em;
+}
+
+@keyframes fadeInWord {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
 @keyframes pageFlip {
