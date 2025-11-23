@@ -286,10 +286,10 @@ formTenhoLivro.addEventListener('submit', async (e) => {
     // Por enquanto, vou simular o envio e mostrar instruções
     
     // OPÇÃO 1: Usar Formspree (gratuito)
-    // Descomente as linhas abaixo e substitua SEU_FORM_ID pelo ID do Formspree
+    // Descomente as linhas abaixo e substitua movbrkaj pelo ID do Formspree
     /*
     try {
-        const response = await fetch('https://formspree.io/f/SEU_FORM_ID', {
+        const response = await fetch('https://formspree.io/f/movbrkaj', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
