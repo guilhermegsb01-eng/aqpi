@@ -927,6 +927,11 @@ html {
     filter: grayscale(0);
 }
 
+.simbolo-only {
+    clip-path: inset(0 35% 0 35%);
+    transform: scale(1.8);
+}
+
 @media (max-width: 768px) {
     .logo-strip {
         gap: 2rem;
