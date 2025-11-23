@@ -366,3 +366,21 @@ Observações: ${observacoes || 'Nenhuma'}
     alert('✅ Obrigado! Seu cliente de email será aberto para enviar os dados. Entraremos em contato em breve!');
     fecharModal();
 });
+
+// Botão Voltar ao Topo
+const backToTopBtn = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+        backToTopBtn.classList.add('visible');
+    } else {
+        backToTopBtn.classList.remove('visible');
+    }
+});
+
+backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
