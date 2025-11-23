@@ -281,40 +281,15 @@ formTenhoLivro.addEventListener('submit', async (e) => {
     const email = document.getElementById('emailUsuario').value;
     const telefone = document.getElementById('telefoneUsuario').value;
     const observacoes = document.getElementById('observacoes').value;
-
-try {
-       const response = await fetch('https://formspree.io/f/movbrkaj', {
-           method: 'POST',
-           headers: {
-               'Content-Type': 'application/json'
-           },
-           body: JSON.stringify({
-               livro: livro,
-               nome: nome,
-               email: email,
-               telefone: telefone,
-               observacoes: observacoes
-           })
-       });
-       
-       if (response.ok) {
-           alert('✅ Obrigado! Recebemos sua solicitação e entraremos em contato em breve!');
-           fecharModal();
-       } else {
-           alert('❌ Erro ao enviar. Por favor, tente novamente.');
-       }
-   } catch (error) {
-       alert('❌ Erro ao enviar. Por favor, tente novamente.');
-   }
     
     // Aqui você pode integrar com um serviço de email
     // Por enquanto, vou simular o envio e mostrar instruções
     
     // OPÇÃO 1: Usar Formspree (gratuito)
-    // Descomente as linhas abaixo e substitua movbrkaj pelo ID do Formspree
+    // Descomente as linhas abaixo e substitua SEU_FORM_ID pelo ID do Formspree
     /*
     try {
-        const response = await fetch('https://formspree.io/f/movbrkaj', {
+        const response = await fetch('https://formspree.io/f/SEU_FORM_ID', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -370,17 +345,19 @@ Observações: ${observacoes || 'Nenhuma'}
 // Botão Voltar ao Topo
 const backToTopBtn = document.getElementById('backToTop');
 
-window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 300) {
-        backToTopBtn.classList.add('visible');
-    } else {
-        backToTopBtn.classList.remove('visible');
-    }
-});
-
-backToTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+if (backToTopBtn) {
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
     });
-});
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
