@@ -7,12 +7,16 @@
 
 @font-face {
     font-family: 'All Round Gothic';
-    src: url('https://db.onlinewebfonts.com/t/8e04a67e0853cf8d47bcfae88de00e0e.eot');
-    src: url('https://db.onlinewebfonts.com/t/8e04a67e0853cf8d47bcfae88de00e0e.eot?#iefix') format('embedded-opentype'),
-         url('https://db.onlinewebfonts.com/t/8e04a67e0853cf8d47bcfae88de00e0e.woff2') format('woff2'),
-         url('https://db.onlinewebfonts.com/t/8e04a67e0853cf8d47bcfae88de00e0e.woff') format('woff'),
-         url('https://db.onlinewebfonts.com/t/8e04a67e0853cf8d47bcfae88de00e0e.ttf') format('truetype'),
-         url('https://db.onlinewebfonts.com/t/8e04a67e0853cf8d47bcfae88de00e0e.svg#All Round Gothic Book') format('svg');
+    src: url('AllRoundGothic-Book.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'All Round Gothic';
+    src: url('AllRoundGothic-Demi.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
 }
 
 :root {
