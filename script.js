@@ -229,3 +229,115 @@ if (heroSection) {
 
 console.log('🎉 AQPI - Site carregado com sucesso!');
 console.log('📚 Conectando leitores a livros que transformam vidas.');
+
+// Modal "Tenho esse Livro"
+const modalOverlay = document.getElementById('modalTenhoLivro');
+const modalClose = document.getElementById('modalClose');
+const formTenhoLivro = document.getElementById('formTenhoLivro');
+const botoesTenhoLivro = document.querySelectorAll('.btn-tenho-livro');
+
+// Abrir modal ao clicar em "Tenho esse livro"
+botoesTenhoLivro.forEach(botao => {
+    botao.addEventListener('click', () => {
+        const livro = botao.getAttribute('data-livro');
+        const autor = botao.getAttribute('data-autor');
+        
+        document.getElementById('modalBookTitle').textContent = `${livro} - ${autor}`;
+        document.getElementById('livroNome').value = `${livro} - ${autor}`;
+        
+        modalOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Previne scroll
+    });
+});
+
+// Fechar modal
+function fecharModal() {
+    modalOverlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+    formTenhoLivro.reset();
+}
+
+modalClose.addEventListener('click', fecharModal);
+
+modalOverlay.addEventListener('click', (e) => {
+    if (e.target === modalOverlay) {
+        fecharModal();
+    }
+});
+
+// Fechar modal com ESC
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+        fecharModal();
+    }
+});
+
+// Enviar formulário
+formTenhoLivro.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const livro = document.getElementById('livroNome').value;
+    const nome = document.getElementById('nomeUsuario').value;
+    const email = document.getElementById('emailUsuario').value;
+    const telefone = document.getElementById('telefoneUsuario').value;
+    const observacoes = document.getElementById('observacoes').value;
+    
+    // Aqui você pode integrar com um serviço de email
+    // Por enquanto, vou simular o envio e mostrar instruções
+    
+    // OPÇÃO 1: Usar Formspree (gratuito)
+    // Descomente as linhas abaixo e substitua SEU_FORM_ID pelo ID do Formspree
+    /*
+    try {
+        const response = await fetch('https://formspree.io/f/SEU_FORM_ID', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                livro: livro,
+                nome: nome,
+                email: email,
+                telefone: telefone,
+                observacoes: observacoes
+            })
+        });
+        
+        if (response.ok) {
+            alert('✅ Obrigado! Recebemos sua solicitação e entraremos em contato em breve!');
+            fecharModal();
+        } else {
+            alert('❌ Erro ao enviar. Por favor, tente novamente.');
+        }
+    } catch (error) {
+        alert('❌ Erro ao enviar. Por favor, tente novamente.');
+    }
+    */
+    
+    // OPÇÃO 2: Enviar por email (simulação)
+    // Por enquanto, apenas mostra os dados no console e alert
+    console.log('📨 Nova solicitação de livro:');
+    console.log('Livro:', livro);
+    console.log('Nome:', nome);
+    console.log('Email:', email);
+    console.log('Telefone:', telefone);
+    console.log('Observações:', observacoes);
+    
+    // Criar mailto link para enviar por email
+    const assunto = `AQPI - Tenho o livro: ${livro}`;
+    const corpo = `
+Nome: ${nome}
+Email: ${email}
+Telefone: ${telefone || 'Não informado'}
+Livro: ${livro}
+Observações: ${observacoes || 'Nenhuma'}
+    `.trim();
+    
+    const mailtoLink = `mailto:contato@aqpi.com.br?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`;
+    
+    // Abre o cliente de email do usuário
+    window.location.href = mailtoLink;
+    
+    alert('✅ Obrigado! Seu cliente de email será aberto para enviar os dados. Entraremos em contato em breve!');
+    fecharModal();
+});
