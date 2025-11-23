@@ -281,6 +281,31 @@ formTenhoLivro.addEventListener('submit', async (e) => {
     const email = document.getElementById('emailUsuario').value;
     const telefone = document.getElementById('telefoneUsuario').value;
     const observacoes = document.getElementById('observacoes').value;
+
+try {
+       const response = await fetch('https://formspree.io/f/movbrkaj', {
+           method: 'POST',
+           headers: {
+               'Content-Type': 'application/json'
+           },
+           body: JSON.stringify({
+               livro: livro,
+               nome: nome,
+               email: email,
+               telefone: telefone,
+               observacoes: observacoes
+           })
+       });
+       
+       if (response.ok) {
+           alert('✅ Obrigado! Recebemos sua solicitação e entraremos em contato em breve!');
+           fecharModal();
+       } else {
+           alert('❌ Erro ao enviar. Por favor, tente novamente.');
+       }
+   } catch (error) {
+       alert('❌ Erro ao enviar. Por favor, tente novamente.');
+   }
     
     // Aqui você pode integrar com um serviço de email
     // Por enquanto, vou simular o envio e mostrar instruções
