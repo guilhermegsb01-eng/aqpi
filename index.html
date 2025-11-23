@@ -135,7 +135,10 @@
                         <div class="troca-usuario">
                             <span class="usuario-nome">Oferecido por Guilherme</span>
                         </div>
-                        <a href="#" class="btn btn-small">Propor Troca</a>
+                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                            <a href="#" class="btn btn-small btn-propor-troca">Propor Troca</a>
+                            <button class="btn btn-small btn-tenho-livro" data-livro="A 50ª Lei" data-autor="Robert Greene e 50 Cent">Tenho esse livro</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -283,6 +286,30 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal Tenho esse Livro -->
+    <div class="modal-overlay" id="modalTenhoLivro">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-header">
+                <span class="book-emoji">📚</span>
+                <h2>Ótimo! Você tem este livro!</h2>
+            </div>
+            <div class="modal-body">
+                <p><strong id="modalBookTitle"></strong></p>
+                <p>Obrigado por querer compartilhar! Por favor, deixe seus dados e entraremos em contato para avaliar e incluir seu livro em nosso acervo de trocas.</p>
+                
+                <form class="modal-form" id="formTenhoLivro">
+                    <input type="hidden" id="livroNome" name="livro">
+                    <input type="text" id="nomeUsuario" name="nome" placeholder="Seu nome" required>
+                    <input type="email" id="emailUsuario" name="email" placeholder="Seu email" required>
+                    <input type="tel" id="telefoneUsuario" name="telefone" placeholder="Seu telefone (opcional)">
+                    <textarea id="observacoes" name="observacoes" rows="3" placeholder="Observações sobre o estado do livro (opcional)"></textarea>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
