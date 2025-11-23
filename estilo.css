@@ -905,6 +905,38 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Divisória com Logos */
+.logo-divider {
+    padding: 40px 0;
+    background-color: var(--background-light);
+    overflow: hidden;
+}
+
+.logo-strip {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    opacity: 0.3;
+}
+
+.logo-strip img {
+    height: 40px;
+    width: auto;
+    filter: grayscale(0);
+}
+
+@media (max-width: 768px) {
+    .logo-strip {
+        gap: 2rem;
+    }
+    
+    .logo-strip img {
+        height: 30px;
+    }
+}
+
 /* Botão Voltar ao Topo */
 .back-to-top {
     position: fixed;
