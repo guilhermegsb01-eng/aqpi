@@ -943,7 +943,7 @@ html {
 
 .simbolo-only {
     clip-path: inset(0 29% 0 29%);
-    transform: scale(2.1);
+    transform: scale(2.2);
 }
 
 @media (max-width: 768px) {
