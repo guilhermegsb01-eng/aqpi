@@ -906,6 +906,7 @@ html {
     padding: 40px 0;
     background-color: var(--background-light);
     overflow: hidden;
+    border: none;
 }
 
 .logo-strip {
@@ -915,12 +916,14 @@ html {
     justify-content: center;
     flex-wrap: nowrap;
     opacity: 0.3;
+    border: none;
 }
 
 .logo-strip img {
     height: 50px;
     width: auto;
     filter: grayscale(0);
+    border: none;
 }
 
 .simbolo-only {
