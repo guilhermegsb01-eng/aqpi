@@ -98,6 +98,8 @@ h1, h2, h3, h4 {
     transition: var(--transition);
 }
 
+
+
 .nav-link:hover::after,
 .nav-link.active::after {
     width: 100%;
