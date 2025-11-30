@@ -924,11 +924,7 @@ html {
     width: auto;
     filter: grayscale(0);
     border: none;
-}
 
-.simbolo-only {
-    clip-path: inset(0 28% 0 28%);
-    transform: scale(2.5);
 }
 
 @media (max-width: 768px) {
