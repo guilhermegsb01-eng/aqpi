@@ -920,7 +920,7 @@ html {
 }
 
 .logo-strip img {
-    height: 100px;
+    height: 250px;
     width: auto;
     filter: grayscale(0);
     border: none;
