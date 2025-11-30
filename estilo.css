@@ -190,13 +190,15 @@ h1, h2, h3, h4 {
     margin-bottom: 1.5rem;
     transform-style: preserve-3d;
     cursor: default;
+    text-align: center;
 }
 
 .hero-title .palavra {
     display: inline-block;
     opacity: 0;
     animation: fadeInWord 0.8s ease forwards;
-    margin-right: 0.3em;
+    margin-right: 0.15em;
+    
 }
 
 @keyframes fadeInWord {
