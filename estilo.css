@@ -902,29 +902,43 @@ html {
 }
 
 /* Divisória com Logos */
+/* Divisória com Logos - Animação Infinita */
 .logo-divider {
-    padding: 40px 0 10px 0;
+    padding: 40px 0 20px 0;
     background-color: var(--background-light);
     overflow: hidden;
     border: none;
+    position: relative;
 }
 
 .logo-strip {
     display: flex;
     gap: 3rem;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: nowrap;
     opacity: 0.3;
     border: none;
+    animation: scrollInfinito 20s linear infinite;
+    width: max-content;
 }
 
 .logo-strip img {
-    height: 250px;
+    height: 80px;
     width: auto;
     filter: grayscale(0);
     border: none;
+    flex-shrink: 0;
+}
 
+@keyframes scrollInfinito {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
 }
 
 @media (max-width: 768px) {
