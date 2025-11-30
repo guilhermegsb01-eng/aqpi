@@ -197,7 +197,7 @@ h1, h2, h3, h4 {
     display: inline-block;
     opacity: 0;
     animation: fadeInWord 0.8s ease forwards;
-    margin-right: 0.15em;
+    margin-right: 0.10em;
     
 }
 
