@@ -985,7 +985,7 @@ html {
     flex-wrap: nowrap;
     opacity: 0.3;
     border: none;
-    animation: scrollInfinito 10s linear infinite;
+    animation: scrollInfinito 16s linear infinite;
     width: max-content;
 }
 
