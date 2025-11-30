@@ -970,7 +970,7 @@ html {
 /* Divisória com Logos */
 /* Divisória com Logos - Animação Infinita */
 .logo-divider {
-    padding: 40px 0 20px 0;
+    padding: 40px 0;
     background-color: var(--background-light);
     overflow: hidden;
     border: none;
