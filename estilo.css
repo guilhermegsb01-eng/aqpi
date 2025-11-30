@@ -924,7 +924,7 @@ html {
 }
 
 .logo-strip img {
-    height: 80px;
+    height: 250px;
     width: auto;
     filter: grayscale(0);
     border: none;
