@@ -927,7 +927,7 @@ html {
 }
 
 .simbolo-only {
-    clip-path: inset(0 31% 0 31%);
+    clip-path: inset(0 30% 0 30%);
     transform: scale(2.2);
 }
 
