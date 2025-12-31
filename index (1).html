@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AQPI - Conectando Leitores e Livros</title>
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="estilo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,9 +39,20 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="hero-background.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Conectando Leitores a Livros que Transformam</h1>
+                <h1 class="hero-title">
+                    <span class="palavra" style="animation-delay: 0s">Conectando</span>
+                    <span class="palavra" style="animation-delay: 0.1s">Leitores</span>
+                    <span class="palavra" style="animation-delay: 0.2s">a</span>
+                    <span class="palavra" style="animation-delay: 0.3s">Livros</span>
+                    <span class="palavra" style="animation-delay: 0.4s">que</span>
+                    <span class="palavra" style="animation-delay: 0.5s">Transformam</span>
+                </h1>
                 <p class="hero-subtitle">Descubra resenhas autênticas e troque livros com outros apaixonados pela leitura</p>
                 <div class="hero-buttons">
                     <a href="#resenhas" class="btn btn-primary">Explorar Resenhas</a>
@@ -49,16 +61,16 @@
             </div>
             <div class="hero-stats">
                 <div class="stat">
-                    <h3>500+</h3>
-                    <p>Resenhas</p>
+                    <h3>1</h3>
+                    <p>Resenha</p>
                 </div>
                 <div class="stat">
-                    <h3>1.200+</h3>
-                    <p>Livros para Troca</p>
+                    <h3>1</h3>
+                    <p>Livro para Troca</p>
                 </div>
                 <div class="stat">
-                    <h3>3.000+</h3>
-                    <p>Leitores</p>
+                    <h3>2</h3>
+                    <p>Pessoas na Comunidade</p>
                 </div>
             </div>
         </div>
@@ -85,7 +97,7 @@
                 <!-- Resenha Card 1 -->
                 <article class="resenha-card">
                     <div class="resenha-image">
-                        <div class="placeholder-image">🧠</div>
+                        <img src="capa-mente-afiada.webp" alt="Capa do livro Mente Afiada" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="resenha-content">
                         <span class="resenha-categoria">Não-ficção</span>
@@ -98,97 +110,25 @@
                         <a href="resenha-mente-afiada.html" class="resenha-link">Ler resenha completa →</a>
                     </div>
                 </article>
-
-                <!-- Resenha Card 2 -->
-                <article class="resenha-card">
-                    <div class="resenha-image">
-                        <div class="placeholder-image">📚</div>
-                    </div>
-                    <div class="resenha-content">
-                        <span class="resenha-categoria">Romance</span>
-                        <h3 class="resenha-titulo">Orgulho e Preconceito</h3>
-                        <p class="resenha-excerpt">Jane Austen cria personagens inesquecíveis neste clássico sobre amor, sociedade e autodescoberta...</p>
-                        <div class="resenha-meta">
-                            <span class="resenha-autor">Por Carlos Mendes</span>
-                            <span class="resenha-data">03 Nov 2025</span>
-                        </div>
-                        <a href="#" class="resenha-link">Ler resenha completa →</a>
-                    </div>
-                </article>
-
-                <!-- Resenha Card 3 -->
-                <article class="resenha-card">
-                    <div class="resenha-image">
-                        <div class="placeholder-image">📕</div>
-                    </div>
-                    <div class="resenha-content">
-                        <span class="resenha-categoria">Fantasia</span>
-                        <h3 class="resenha-titulo">O Senhor dos Anéis</h3>
-                        <p class="resenha-excerpt">Tolkien constrói um universo complexo e envolvente. Uma jornada épica sobre amizade, coragem e sacrifício...</p>
-                        <div class="resenha-meta">
-                            <span class="resenha-autor">Por Maria Costa</span>
-                            <span class="resenha-data">01 Nov 2025</span>
-                        </div>
-                        <a href="#" class="resenha-link">Ler resenha completa →</a>
-                    </div>
-                </article>
-
-                <!-- Resenha Card 4 -->
-                <article class="resenha-card">
-                    <div class="resenha-image">
-                        <div class="placeholder-image">📗</div>
-                    </div>
-                    <div class="resenha-content">
-                        <span class="resenha-categoria">Não-ficção</span>
-                        <h3 class="resenha-titulo">Sapiens - Yuval Harari</h3>
-                        <p class="resenha-excerpt">Uma análise fascinante da história da humanidade. Harari nos faz repensar tudo que sabemos sobre nossa espécie...</p>
-                        <div class="resenha-meta">
-                            <span class="resenha-autor">Por João Santos</span>
-                            <span class="resenha-data">28 Out 2025</span>
-                        </div>
-                        <a href="#" class="resenha-link">Ler resenha completa →</a>
-                    </div>
-                </article>
-
-                <!-- Resenha Card 5 -->
-                <article class="resenha-card">
-                    <div class="resenha-image">
-                        <div class="placeholder-image">📘</div>
-                    </div>
-                    <div class="resenha-content">
-                        <span class="resenha-categoria">Suspense</span>
-                        <h3 class="resenha-titulo">O Código Da Vinci</h3>
-                        <p class="resenha-excerpt">Dan Brown entrega uma trama eletrizante repleta de mistérios, símbolos e reviravoltas inesperadas...</p>
-                        <div class="resenha-meta">
-                            <span class="resenha-autor">Por Paula Ferreira</span>
-                            <span class="resenha-data">25 Out 2025</span>
-                        </div>
-                        <a href="#" class="resenha-link">Ler resenha completa →</a>
-                    </div>
-                </article>
-
-                <!-- Resenha Card 6 -->
-                <article class="resenha-card">
-                    <div class="resenha-image">
-                        <div class="placeholder-image">📙</div>
-                    </div>
-                    <div class="resenha-content">
-                        <span class="resenha-categoria">Clássico</span>
-                        <h3 class="resenha-titulo">Dom Casmurro</h3>
-                        <p class="resenha-excerpt">Machado de Assis nos apresenta um dos maiores mistérios da literatura brasileira. Capitu traiu ou não?...</p>
-                        <div class="resenha-meta">
-                            <span class="resenha-autor">Por Ricardo Lima</span>
-                            <span class="resenha-data">22 Out 2025</span>
-                        </div>
-                        <a href="#" class="resenha-link">Ler resenha completa →</a>
-                    </div>
-                </article>
-            </div>
-            <div class="section-cta">
-                <a href="#" class="btn btn-primary">Ver Todas as Resenhas</a>
             </div>
         </div>
     </section>
+
+    <!-- Divisória com Símbolos -->
+    <div class="logo-divider">
+        <div class="logo-strip">
+            <img src="aqpi__1_.png" alt="AQPI" class="simbolo-only">
+            <img src="aqpi__1_.png" alt="AQPI" class="simbolo-only">
+            <img src="aqpi__1_.png" alt="AQPI" class="simbolo-only">
+            <img src="aqpi__1_.png" alt="AQPI" class="simbolo-only">
+            <img src="aqpi__1_.png" alt="AQPI" class="simbolo-only">
+            <img src="aqpi__1_.png" alt="AQPI" class="simbolo-only">
+            <img src="aqpi__1_.png" alt="AQPI" class="simbolo-only">
+            <img src="aqpi__1_.png" alt="AQPI" class="simbolo-only">
+            <img src="aqpi__1_.png" alt="AQPI" class="simbolo-only">
+            <img src="aqpi__1_.png" alt="AQPI" class="simbolo-only">
+        </div>
+    </div>
 
     <!-- Trocas Section -->
     <section class="trocas" id="trocas">
@@ -209,125 +149,44 @@
                 <!-- Troca Card 1 -->
                 <div class="troca-card">
                     <div class="troca-image">
-                        <div class="placeholder-image">📖</div>
+                        <img src="capa-50-lei.jpg" alt="Capa do livro A 50ª Lei" style="width: 100%; height: 100%; object-fit: cover;">
                         <span class="troca-status disponivel">Disponível</span>
                     </div>
                     <div class="troca-content">
-                        <h3 class="troca-titulo">A Culpa é das Estrelas</h3>
-                        <p class="troca-autor">John Green</p>
+                        <h3 class="troca-titulo">A 50ª Lei</h3>
+                        <p class="troca-autor">Robert Greene e 50 Cent</p>
                         <div class="troca-info">
-                            <span class="troca-estado">📍 São Paulo, SP</span>
+                            <span class="troca-estado">📍 São Bernardo do Campo, SP</span>
                             <span class="troca-condicao">Estado: Ótimo</span>
                         </div>
                         <div class="troca-usuario">
-                            <span class="usuario-nome">Oferecido por Mariana</span>
+                            <span class="usuario-nome">Oferecido por Guilherme</span>
                         </div>
-                        <a href="#" class="btn btn-small">Propor Troca</a>
-                    </div>
-                </div>
-
-                <!-- Troca Card 2 -->
-                <div class="troca-card">
-                    <div class="troca-image">
-                        <div class="placeholder-image">📚</div>
-                        <span class="troca-status disponivel">Disponível</span>
-                    </div>
-                    <div class="troca-content">
-                        <h3 class="troca-titulo">Harry Potter - Coleção</h3>
-                        <p class="troca-autor">J.K. Rowling</p>
-                        <div class="troca-info">
-                            <span class="troca-estado">📍 Rio de Janeiro, RJ</span>
-                            <span class="troca-condicao">Estado: Bom</span>
+                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                            <a href="#" class="btn btn-small btn-propor-troca">Propor Troca</a>
+                            <button class="btn btn-small btn-tenho-livro" data-livro="A 50ª Lei" data-autor="Robert Greene e 50 Cent">Tenho esse livro</button>
                         </div>
-                        <div class="troca-usuario">
-                            <span class="usuario-nome">Oferecido por Pedro</span>
-                        </div>
-                        <a href="#" class="btn btn-small">Propor Troca</a>
-                    </div>
-                </div>
-
-                <!-- Troca Card 3 -->
-                <div class="troca-card">
-                    <div class="troca-image">
-                        <div class="placeholder-image">📕</div>
-                        <span class="troca-status disponivel">Disponível</span>
-                    </div>
-                    <div class="troca-content">
-                        <h3 class="troca-titulo">O Pequeno Príncipe</h3>
-                        <p class="troca-autor">Antoine de Saint-Exupéry</p>
-                        <div class="troca-info">
-                            <span class="troca-estado">📍 Belo Horizonte, MG</span>
-                            <span class="troca-condicao">Estado: Ótimo</span>
-                        </div>
-                        <div class="troca-usuario">
-                            <span class="usuario-nome">Oferecido por Júlia</span>
-                        </div>
-                        <a href="#" class="btn btn-small">Propor Troca</a>
-                    </div>
-                </div>
-
-                <!-- Troca Card 4 -->
-                <div class="troca-card">
-                    <div class="troca-image">
-                        <div class="placeholder-image">📗</div>
-                        <span class="troca-status reservado">Reservado</span>
-                    </div>
-                    <div class="troca-content">
-                        <h3 class="troca-titulo">O Alquimista</h3>
-                        <p class="troca-autor">Paulo Coelho</p>
-                        <div class="troca-info">
-                            <span class="troca-estado">📍 Curitiba, PR</span>
-                            <span class="troca-condicao">Estado: Ótimo</span>
-                        </div>
-                        <div class="troca-usuario">
-                            <span class="usuario-nome">Oferecido por Lucas</span>
-                        </div>
-                        <a href="#" class="btn btn-small btn-disabled">Reservado</a>
-                    </div>
-                </div>
-
-                <!-- Troca Card 5 -->
-                <div class="troca-card">
-                    <div class="troca-image">
-                        <div class="placeholder-image">📘</div>
-                        <span class="troca-status disponivel">Disponível</span>
-                    </div>
-                    <div class="troca-content">
-                        <h3 class="troca-titulo">A Menina que Roubava Livros</h3>
-                        <p class="troca-autor">Markus Zusak</p>
-                        <div class="troca-info">
-                            <span class="troca-estado">📍 Porto Alegre, RS</span>
-                            <span class="troca-condicao">Estado: Bom</span>
-                        </div>
-                        <div class="troca-usuario">
-                            <span class="usuario-nome">Oferecido por Fernanda</span>
-                        </div>
-                        <a href="#" class="btn btn-small">Propor Troca</a>
-                    </div>
-                </div>
-
-                <!-- Troca Card 6 -->
-                <div class="troca-card">
-                    <div class="troca-image">
-                        <div class="placeholder-image">📙</div>
-                        <span class="troca-status disponivel">Disponível</span>
-                    </div>
-                    <div class="troca-content">
-                        <h3 class="troca-titulo">Cem Anos de Solidão</h3>
-                        <p class="troca-autor">Gabriel García Márquez</p>
-                        <div class="troca-info">
-                            <span class="troca-estado">📍 Brasília, DF</span>
-                            <span class="troca-condicao">Estado: Ótimo</span>
-                        </div>
-                        <div class="troca-usuario">
-                            <span class="usuario-nome">Oferecido por Rafael</span>
-                        </div>
-                        <a href="#" class="btn btn-small">Propor Troca</a>
                     </div>
                 </div>
             </div>
-            <div class="section-cta">
-                <a href="#" class="btn btn-primary">Ver Todos os Livros</a>
+        </div>
+    </section>
+
+    <!-- Disclaimer - Outros Sites -->
+    <section class="disclaimer">
+        <div class="container">
+            <div class="disclaimer-content">
+                <div class="disclaimer-icon">📚</div>
+                <h3 class="disclaimer-title">Não encontrou o livro que procura?</h3>
+                <p class="disclaimer-text">Confira também estas plataformas de troca de livros:</p>
+                <div class="disclaimer-links">
+                    <a href="https://trocalivro.saobernardo.sp.gov.br/troca-livro/externo/telaBusca/externa" target="_blank" rel="noopener noreferrer" class="disclaimer-link">
+                        🏛️ Troca Livro - São Bernardo do Campo
+                    </a>
+                    <a href="https://www.trocadelivros.com.br/" target="_blank" rel="noopener noreferrer" class="disclaimer-link">
+                        📖 Troca de Livros
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -398,7 +257,7 @@
                             <span class="contato-icon">📧</span>
                             <div>
                                 <h4>Email</h4>
-                                <p>contato@aqpi.com.br</p>
+                                <p>contato.aqpi@gmail.com</p>
                             </div>
                         </div>
                         <div class="contato-item">
@@ -473,6 +332,33 @@
             </div>
         </div>
     </footer>
+
+    <!-- Botão Voltar ao Topo -->
+    <button class="back-to-top" id="backToTop" title="Voltar ao topo">↑</button>
+
+    <!-- Modal Tenho esse Livro -->
+    <div class="modal-overlay" id="modalTenhoLivro">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-header">
+                <span class="book-emoji">📚</span>
+                <h2>Ótimo! Você tem este livro!</h2>
+            </div>
+            <div class="modal-body">
+                <p><strong id="modalBookTitle"></strong></p>
+                <p>Obrigado por querer compartilhar! Por favor, deixe seus dados e entraremos em contato para avaliar e incluir seu livro em nosso acervo de trocas.</p>
+                
+                <form class="modal-form" id="formTenhoLivro">
+                    <input type="hidden" id="livroNome" name="livro">
+                    <input type="text" id="nomeUsuario" name="nome" placeholder="Seu nome" required>
+                    <input type="email" id="emailUsuario" name="email" placeholder="Seu email" required>
+                    <input type="tel" id="telefoneUsuario" name="telefone" placeholder="Seu telefone (opcional)">
+                    <textarea id="observacoes" name="observacoes" rows="3" placeholder="Observações sobre o estado do livro (opcional)"></textarea>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
