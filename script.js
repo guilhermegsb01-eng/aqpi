@@ -61,7 +61,7 @@ window.addEventListener('scroll', () => {
 
 // Filtros de Trocas
 const filterButtons = document.querySelectorAll('.filter-btn');
-const trocaCards = document.querySelectorAll('.troca-card');
+const trocaCards = document.querySelectorAll('.troca-card-modern');
 
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -118,22 +118,22 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observar todos os cards
-const allCards = document.querySelectorAll('.resenha-card, .troca-card, .funciona-card, .valor');
+const allCards = document.querySelectorAll('.resenha-card, .troca-card-modern, .funciona-card, .valor');
 allCards.forEach(card => {
     card.style.opacity = '0';
     observer.observe(card);
 });
 
 // Botões de "Propor Troca"
-const propoeTrocaBtns = document.querySelectorAll('.troca-card .btn-small:not(.btn-disabled)');
+const propoeTrocaBtns = document.querySelectorAll('.troca-card-modern .btn-primary-modern');
 propoeTrocaBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
         e.preventDefault();
-        const card = btn.closest('.troca-card');
-        const titulo = card.querySelector('.troca-titulo').textContent;
-        const usuario = card.querySelector('.usuario-nome').textContent;
-        
-        alert(`Você está propondo uma troca para "${titulo}".\n\n${usuario}\n\nEm breve teremos o sistema de mensagens implementado!`);
+        const card = btn.closest('.troca-card-modern');
+        const titulo = card.querySelector('.troca-titulo-modern').textContent;
+        const usuario = card.querySelector('.oferecido-por strong').textContent;
+
+        alert(`Você está propondo uma troca para "${titulo}".\n\nOferecido por ${usuario}\n\nEm breve teremos o sistema de mensagens implementado!`);
     });
 });
 
@@ -216,7 +216,7 @@ console.log('📚 Conectando leitores a livros que transformam vidas.');
 const modalOverlay = document.getElementById('modalTenhoLivro');
 const modalClose = document.getElementById('modalClose');
 const formTenhoLivro = document.getElementById('formTenhoLivro');
-const botoesTenhoLivro = document.querySelectorAll('.btn-tenho-livro');
+const botoesTenhoLivro = document.querySelectorAll('.btn-secondary-modern[data-livro]');
 
 // Abrir modal ao clicar em "Tenho esse livro"
 botoesTenhoLivro.forEach(botao => {
