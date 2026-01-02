@@ -156,26 +156,37 @@
                 <button class="filter-btn">Suspense</button>
                 <button class="filter-btn">Não-ficção</button>
             </div>
-            <div class="trocas-grid">
+            <div class="trocas-grid-modern">
                 <!-- Troca Card 1 -->
-                <div class="troca-card">
-                    <div class="troca-image">
-                        <img src="capa-50-lei.jpg" alt="Capa do livro A 50ª Lei" style="width: 100%; height: 100%; object-fit: cover;">
-                        <span class="troca-status disponivel">Disponível</span>
+                <div class="troca-card-modern">
+                    <div class="troca-image-wrapper">
+                        <img src="capa-50-lei.jpg" alt="Capa do livro A 50ª Lei" class="troca-image-modern">
+                        <span class="badge-disponivel">Disponível</span>
                     </div>
-                    <div class="troca-content">
-                        <h3 class="troca-titulo">A 50ª Lei</h3>
-                        <p class="troca-autor">Robert Greene e 50 Cent</p>
-                        <div class="troca-info">
-                            <span class="troca-estado">📍 São Bernardo do Campo, SP</span>
-                            <span class="troca-condicao">Estado: Ótimo</span>
+                    <div class="troca-info-modern">
+                        <h3 class="troca-titulo-modern">A 50ª Lei</h3>
+                        <p class="troca-autor-modern">Robert Greene e 50 Cent</p>
+                        <div class="troca-detalhes">
+                            <div class="detalhe-item">
+                                <svg class="icon-small" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                                </svg>
+                                <span>São Bernardo do Campo, SP</span>
+                            </div>
+                            <div class="detalhe-item">
+                                <svg class="icon-small" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span>Estado: Ótimo</span>
+                            </div>
                         </div>
-                        <div class="troca-usuario">
-                            <span class="usuario-nome">Oferecido por Guilherme</span>
+                        <div class="troca-footer">
+                            <p class="oferecido-por">Oferecido por <strong>Guilherme</strong></p>
                         </div>
-                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                            <a href="#" class="btn btn-small btn-propor-troca">Propor Troca</a>
-                            <button class="btn btn-small btn-tenho-livro" data-livro="A 50ª Lei" data-autor="Robert Greene e 50 Cent">Tenho esse livro</button>
+                        <div class="troca-actions">
+                            <a href="#" class="btn-modern btn-primary-modern">Propor Troca</a>
+                            <button class="btn-modern btn-secondary-modern" data-livro="A 50ª Lei" data-autor="Robert Greene e 50 Cent">Tenho esse livro</button>
                         </div>
                     </div>
                 </div>
@@ -187,15 +198,17 @@
     <section class="disclaimer">
         <div class="container">
             <div class="disclaimer-content">
-                <div class="disclaimer-icon">📚</div>
+                <div class="disclaimer-icon">
+                    <img src="ilustracao-comunidade.png" alt="Comunidade de leitores" class="disclaimer-img">
+                </div>
                 <h3 class="disclaimer-title">Não encontrou o livro que procura?</h3>
                 <p class="disclaimer-text">Confira também estas plataformas de troca de livros:</p>
                 <div class="disclaimer-links">
                     <a href="https://trocalivro.saobernardo.sp.gov.br/troca-livro/externo/telaBusca/externa" target="_blank" rel="noopener noreferrer" class="disclaimer-link">
-                        🏛️ Troca Livro - São Bernardo do Campo
+                        Troca Livro - São Bernardo do Campo
                     </a>
                     <a href="https://www.trocadelivros.com.br/" target="_blank" rel="noopener noreferrer" class="disclaimer-link">
-                        📖 Troca de Livros
+                        Troca de Livros
                     </a>
                 </div>
             </div>
@@ -235,21 +248,28 @@
     <section class="sobre" id="sobre">
         <div class="container">
             <div class="sobre-content">
-                <h2 class="section-title">Sobre o AQPI</h2>
-                <p>O AQPI nasceu da paixão pela leitura e do desejo de criar uma comunidade onde leitores pudessem se conectar de forma autêntica. Acreditamos que livros têm o poder de transformar vidas, e queremos tornar essa transformação acessível a todos.</p>
-                <p>Nossa plataforma combina resenhas periódicas honestas com um sistema de trocas de livros, facilitando o acesso à leitura de qualidade. Cada resenha é escrita por leitores reais, cada troca fortalece nossa comunidade, e cada livro compartilhado multiplica o conhecimento.</p>
+                <h2 class="section-title">Sobre a AQPI</h2>
+                <div class="destaque-estatistica">
+                    <p class="numero-destaque">53%</p>
+                    <p class="texto-destaque">dos brasileiros não têm o hábito da leitura. Estamos aqui para mudar isso.</p>
+                </div>
+                <p>A AQPI é uma plataforma de trocas de livros criada com o objetivo de expandir o conhecimento e aumentar a sabedoria da sociedade brasileira. Acreditamos que uma sociedade que lê é uma sociedade que pensa e prospera. Em um país onde mais da metade da população não cultiva o hábito da leitura, queremos ser a ponte que conecta pessoas a livros transformadores.</p>
+                <p>Nossa missão é desenvolver o raciocínio crítico, alcançar não-leitores e transformá-los em leitores ativos. Através de resenhas autênticas e de uma comunidade engajada, buscamos criar uma sociedade mais presente, consciente e próspera. Acreditamos que cada troca de livros possa representar um passo a mais rumo a um país que pensa mais e melhor.</p>
                 <div class="sobre-valores">
                     <div class="valor">
-                        <h4>🤝 Comunidade</h4>
-                        <p>Construímos conexões reais entre leitores</p>
+                        <img src="brain.png" alt="Conhecimento" style="width: 70px; height: 70px; display: block; margin: 0 auto 1rem;">
+                        <h4>Conhecimento</h4>
+                        <p>Expandimos horizontes através da leitura</p>
                     </div>
                     <div class="valor">
-                        <h4>📖 Acessibilidade</h4>
-                        <p>Facilitamos o acesso a livros de qualidade</p>
+                        <img src="lupa.png" alt="Raciocínio Crítico" style="width: 70px; height: 70px; display: block; margin: 0 auto 1rem;">
+                        <h4>Raciocínio Crítico</h4>
+                        <p>Desenvolvemos mentes que questionam e refletem</p>
                     </div>
                     <div class="valor">
-                        <h4>💡 Autenticidade</h4>
-                        <p>Resenhas honestas de leitores reais</p>
+                        <img src="plant.png" alt="Transformação" style="width: 70px; height: 70px; display: block; margin: 0 auto 1rem;">
+                        <h4>Transformação</h4>
+                        <p>Criamos leitores onde antes não existiam</p>
                     </div>
                 </div>
             </div>
@@ -265,14 +285,14 @@
                     <p>Tem alguma dúvida, sugestão ou quer fazer parte da nossa comunidade? Envie-nos uma mensagem!</p>
                     <div class="contato-details">
                         <div class="contato-item">
-                            <span class="contato-icon">📧</span>
+                            <span class="contato-icon"><img src="emailicon.png" alt="Email" style="width: 90px; height: 90px;"></span>
                             <div>
                                 <h4>Email</h4>
                                 <p>contato.aqpi@gmail.com</p>
                             </div>
                         </div>
                         <div class="contato-item">
-                            <span class="contato-icon">📱</span>
+                            <span class="contato-icon"><img src="instaicon.png" alt="Redes Sociais" style="width: 90px; height: 90px;"></span>
                             <div>
                                 <h4>Redes Sociais</h4>
                                 <p>@aqpi_oficial</p>
@@ -374,3 +394,5 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+
