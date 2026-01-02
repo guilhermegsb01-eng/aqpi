@@ -5,14 +5,16 @@
     box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
     /* Cores - Mantidas */
     --primary-color: #1a3a52;
     --secondary-color: #c9a882;
-    --text-dark: #2c3e50;
-    --text-light: #6c757d;
+    --text-dark: #000000;
+    --text-medium: #1a1a1a;
+    --text-light: #333333;
+    --text-lighter: #666666;
     --background-light: #fafafa;
     --background-white: #ffffff;
     --accent-color: #d4a574;
@@ -41,37 +43,94 @@
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-size: 1.125rem;
-    line-height: 1.8;
-    letter-spacing: -0.01em;
+    font-weight: 400;
+    line-height: 1.6;
     color: var(--text-dark);
     background-color: var(--background-white);
     overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.2;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
 }
 
 h1 {
     font-size: 4.5rem;
-    font-weight: 700;
+    font-weight: 800;
+    letter-spacing: -0.03em;
 }
 
 h2 {
     font-size: 3rem;
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
 h3 {
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-weight: 600;
 }
 
 h4 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 600;
+}
+
+/* ===== ESTILOS BASE DE PARÁGRAFOS ===== */
+p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+}
+
+/* Enfatizar palavras importantes em parágrafos */
+p strong,
+p b {
+    font-weight: 700;
+    color: #000000;
+}
+
+/* ===== CLASSES AUXILIARES PARA CONTRASTE DE PESO ===== */
+.texto-destaque {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #1a1a1a;
+    font-weight: 400;
+}
+
+.texto-destaque strong,
+.texto-destaque .bold {
+    font-weight: 700;
+    color: #000000;
+}
+
+/* Texto grande com contraste */
+.texto-grande {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #1a1a1a;
+}
+
+/* Texto médio */
+.texto-medio {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #1a1a1a;
+}
+
+/* Texto pequeno */
+.texto-pequeno {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #1a1a1a;
 }
 
 .container {
@@ -212,7 +271,7 @@ h4 {
     height: 100%;
     object-fit: cover;
     z-index: 0;
-    opacity: 0.4;
+    opacity: 0.7;
 }
 
 .hero-overlay {
@@ -238,13 +297,15 @@ h4 {
 }
 
 .hero-title {
+    font-family: 'Inter', sans-serif;
     font-size: 4.5rem;
-    margin-bottom: 2rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
     transform-style: preserve-3d;
     cursor: default;
     text-align: center;
-    letter-spacing: -0.02em;
     line-height: 1.1;
+    letter-spacing: -0.03em;
 }
 
 .hero-title .palavra {
@@ -252,6 +313,7 @@ h4 {
     opacity: 0;
     animation: fadeInWord 0.8s ease forwards;
     margin-right: 0.15em;
+    font-weight: 800;
 }
 
 @keyframes fadeInWord {
@@ -266,15 +328,22 @@ h4 {
 }
 
 .hero-subtitle {
-    font-size: 1.4rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    letter-spacing: -0.01em;
     margin-bottom: 3rem;
-    opacity: 0.9;
     animation: fadeInUp 0.8s ease 0.2s backwards;
-    font-weight: 300;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    line-height: 1.7;
+}
+
+.hero-subtitle strong {
+    font-weight: 700;
+    color: #ffffff;
 }
 
 .hero-buttons {
@@ -311,6 +380,7 @@ h4 {
     font-size: 0.95rem;
     opacity: 0.85;
     font-weight: 400;
+    color: white;
 }
 
 /* Buttons */
@@ -319,12 +389,13 @@ h4 {
     padding: 1.1rem 2.5rem;
     border-radius: 16px;
     text-decoration: none;
+    font-family: 'Inter', sans-serif;
     font-weight: 600;
     transition: var(--transition);
     border: none;
     cursor: pointer;
     font-size: 1rem;
-    letter-spacing: 0.02em;
+    letter-spacing: -0.01em;
 }
 
 .btn-primary {
@@ -402,16 +473,24 @@ h4 {
 }
 
 .section-title {
-    font-size: 2.75rem;
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    font-weight: 700;
     letter-spacing: -0.02em;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
 }
 
 .missao-text {
-    font-size: 1.25rem;
-    line-height: 1.9;
-    color: var(--text-light);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #1a1a1a;
+}
+
+.missao p strong {
+    font-weight: 700;
+    color: #000000;
 }
 
 /* Resenhas Section */
@@ -425,10 +504,12 @@ h4 {
 }
 
 .section-subtitle {
-    font-size: 1.15rem;
-    color: var(--text-light);
-    margin-top: 0.75rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.125rem;
     font-weight: 400;
+    color: #1a1a1a;
+    line-height: 1.6;
+    margin-top: 0.75rem;
 }
 
 .resenhas-grid {
@@ -491,10 +572,12 @@ h4 {
 }
 
 .resenha-excerpt {
-    color: var(--text-light);
-    margin-bottom: 1.25rem;
-    line-height: 1.7;
+    font-family: 'Inter', sans-serif;
     font-size: 1rem;
+    line-height: 1.6;
+    color: #1a1a1a;
+    font-weight: 400;
+    margin-bottom: 1.25rem;
 }
 
 .resenha-meta {
@@ -677,10 +760,12 @@ h4 {
 }
 
 .disclaimer-text {
+    font-family: 'Inter', sans-serif;
     font-size: 1.1rem;
-    color: var(--text-light);
-    margin-bottom: 2.5rem;
-    line-height: 1.7;
+    color: #1a1a1a;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    line-height: 1.6;
 }
 
 .disclaimer-links {
@@ -774,9 +859,10 @@ h4 {
 }
 
 .funciona-card p {
-    color: var(--text-light);
-    line-height: 1.7;
-    font-size: 0.95rem;
+    font-family: 'Inter', sans-serif;
+    color: #1a1a1a;
+    line-height: 1.6;
+    font-weight: 400;
 }
 
 /* Sobre Section */
@@ -792,10 +878,17 @@ h4 {
 }
 
 .sobre-content > p {
-    font-size: 1.15rem;
-    line-height: 1.9;
-    color: var(--text-light);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #1a1a1a;
     margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.sobre-content p strong {
+    font-weight: 700;
+    color: #000000;
 }
 
 .sobre-valores {
@@ -820,9 +913,11 @@ h4 {
 }
 
 .valor p {
+    font-family: 'Inter', sans-serif;
     font-size: 1rem;
-    color: var(--text-light);
     line-height: 1.6;
+    color: #1a1a1a;
+    font-weight: 400;
 }
 
 /* Contato Section */
@@ -838,10 +933,12 @@ h4 {
 }
 
 .contato-info p {
+    font-family: 'Inter', sans-serif;
     font-size: 1.1rem;
-    color: var(--text-light);
+    color: #1a1a1a;
     margin-bottom: 2.5rem;
-    line-height: 1.8;
+    line-height: 1.7;
+    font-weight: 400;
 }
 
 .contato-details {
@@ -877,8 +974,10 @@ h4 {
 }
 
 .contato-item p {
-    color: var(--text-light);
+    font-family: 'Inter', sans-serif;
+    color: #1a1a1a;
     margin: 0;
+    font-weight: 400;
 }
 
 .contato-form {
@@ -893,11 +992,13 @@ h4 {
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: 0.6rem;
-    font-weight: 500;
-    color: var(--primary-color);
+    font-family: 'Inter', sans-serif;
     font-size: 0.95rem;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 0.5rem;
+    display: block;
+    letter-spacing: -0.01em;
 }
 
 .form-group input,
@@ -906,15 +1007,19 @@ h4 {
     padding: 1rem 1.25rem;
     border: 2px solid var(--border-color);
     border-radius: var(--border-radius-sm);
-    font-family: inherit;
+    font-family: 'Inter', sans-serif;
     font-size: 1rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    letter-spacing: -0.01em;
     transition: var(--transition);
     background-color: white;
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: #adb5bd;
+    color: #666666;
+    font-weight: 400;
 }
 
 .form-group input:focus,
@@ -950,9 +1055,12 @@ h4 {
 }
 
 .footer-section p {
-    line-height: 1.8;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    font-weight: 400;
+    color: white;
     opacity: 0.85;
-    font-size: 0.95rem;
 }
 
 .footer-section ul {
@@ -963,12 +1071,16 @@ h4 {
     margin-bottom: 0.75rem;
 }
 
+.footer-section ul li,
 .footer-section ul li a {
+    font-family: 'Inter', sans-serif;
     color: white;
     text-decoration: none;
     opacity: 0.75;
     transition: var(--transition);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    font-weight: 400;
 }
 
 .footer-section ul li a:hover {
@@ -1001,6 +1113,11 @@ h4 {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     opacity: 0.6;
     font-size: 0.9rem;
+    color: white;
+}
+
+.footer-bottom p {
+    color: white;
 }
 
 .section-cta {
@@ -1369,16 +1486,22 @@ html {
     color: white;
 }
 
+.destaque-estatistica p {
+    color: white;
+}
+
 .numero-destaque {
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
     line-height: 1;
+    color: white;
 }
 
-.texto-destaque {
+.destaque-estatistica .texto-destaque {
     font-size: 1.2rem;
     opacity: 0.95;
+    color: white;
 }
 
 @media (max-width: 600px) {
@@ -1464,9 +1587,11 @@ html {
 }
 
 .troca-autor-modern {
+    font-family: 'Inter', sans-serif;
     font-size: 1rem;
-    color: var(--text-light);
+    color: #1a1a1a;
     margin: 0;
+    font-weight: 400;
 }
 
 /* Detalhes */
@@ -1483,8 +1608,10 @@ html {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    font-family: 'Inter', sans-serif;
     font-size: 0.9rem;
-    color: var(--text-light);
+    color: #1a1a1a;
+    font-weight: 400;
 }
 
 .icon-small {
@@ -1503,13 +1630,15 @@ html {
 }
 
 .oferecido-por {
-    color: var(--text-light);
+    font-family: 'Inter', sans-serif;
+    color: #1a1a1a;
     margin: 0;
+    font-weight: 400;
 }
 
 .oferecido-por strong {
-    color: var(--primary-color);
-    font-weight: 600;
+    color: #000000;
+    font-weight: 700;
 }
 
 /* Botões Modernos */
@@ -1574,6 +1703,59 @@ html {
 
     .btn-modern {
         width: 100%;
+    }
+}
+
+/* ===== CLASSES AUXILIARES DE TIPOGRAFIA ===== */
+.texto-secundario {
+    font-weight: 400;
+    color: #9ca3af;
+}
+
+.texto-enfase {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* ===== RESPONSIVIDADE TIPOGRAFIA ===== */
+@media (max-width: 768px) {
+    h1, .hero-title {
+        font-size: 2.5rem;
+        letter-spacing: -0.02em;
+    }
+
+    h2, .section-title {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.125rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .texto-destaque {
+        font-size: 1rem;
+    }
+
+    .texto-grande {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, .hero-title {
+        font-size: 2rem;
+    }
+
+    h2, .section-title {
+        font-size: 1.75rem;
     }
 }
 
