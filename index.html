@@ -46,42 +46,73 @@
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    <span class="palavra" style="animation-delay: 0s">Conectando</span>
-                    <span class="palavra" style="animation-delay: 0.1s">Leitores</span>
-                    <span class="palavra" style="animation-delay: 0.2s">a</span>
-                    <span class="palavra" style="animation-delay: 0.3s">Livros</span>
-                    <span class="palavra" style="animation-delay: 0.4s">que</span>
-                    <span class="palavra" style="animation-delay: 0.5s">Transformam</span>
+                    Quando você troca um livro,<br>
+                    o conhecimento ganha movimento e propósito.
                 </h1>
-                <p class="hero-subtitle">Descubra resenhas autênticas e troque livros com outros apaixonados pela leitura</p>
+                <p class="hero-subtitle">
+                    Para quem sabe que há mais no mundo do que aquilo que já conhece,<br>
+                    mas não sabe por onde começar a descoberta.
+                </p>
                 <div class="hero-buttons">
-                    <a href="#resenhas" class="btn btn-primary">Explorar Resenhas</a>
-                    <a href="#trocas" class="btn btn-secondary">Ver Trocas</a>
+                    <a href="#trocas" class="btn btn-primary">Descobrir meu próximo livro</a>
+                    <a href="#como-funciona" class="btn btn-secondary">Ver como trocar</a>
                 </div>
             </div>
             <div class="hero-stats">
                 <div class="stat">
-                    <h3>1</h3>
-                    <p>Resenha</p>
+                    <span class="stat-number">📚 1</span>
+                    <span class="stat-label">Resenha</span>
                 </div>
                 <div class="stat">
-                    <h3>2</h3>
-                    <p>Livros para Troca</p>
+                    <span class="stat-number">📖 4</span>
+                    <span class="stat-label">Livros</span>
                 </div>
                 <div class="stat">
-                    <h3>2</h3>
-                    <p>Pessoas na Comunidade</p>
+                    <span class="stat-number">👥 2</span>
+                    <span class="stat-label">Pessoas</span>
                 </div>
+            </div>
+
+            <div class="hero-trust">
+                <div class="trust-badges">
+                    <span class="trust-badge">✅ Troca por fichas</span>
+                    <span class="trust-badge">🔄 Ciclo contínuo</span>
+                </div>
+                <p class="trust-text">Uma comunidade em construção. Faça parte do começo.</p>
             </div>
         </div>
     </section>
 
-    <!-- Missão Section -->
-    <section class="missao">
+    <!-- Seção Dor -->
+    <section class="secao-dor">
         <div class="container">
-            <div class="missao-content">
-                <h2 class="section-title">Nossa Missão</h2>
-                <p class="missao-text">No AQPI, nossa missão é conectar leitores a livros que realmente interessam. Acreditamos que cada livro tem o poder de transformar vidas e queremos facilitar esse acesso através de resenhas honestas e uma comunidade de trocas ativa.</p>
+            <h2 class="section-title">O que te impede de ler mais?</h2>
+            <p class="dor-texto">
+                Você já deixou de comprar um livro porque não tinha certeza se ia gostar? Já leu um livro ótimo que hoje só ocupa espaço? Metade dos leitores está na mesma. A AQPI conecta essas duas pontas.
+            </p>
+        </div>
+    </section>
+
+    <!-- Seção Solução -->
+    <section class="secao-solucao">
+        <div class="container">
+            <h2 class="section-title">Como funcionamos</h2>
+            <div class="solucao-grid">
+                <div class="solucao-item">
+                    <div class="solucao-icon">📖</div>
+                    <h3>Doe um livro. Ganhe uma ficha. Escolha outro.</h3>
+                    <p>Simples. Justo. Sustentável.</p>
+                </div>
+                <div class="solucao-item">
+                    <div class="solucao-icon">💬</div>
+                    <h3>Resenhas honestas de quem leu</h3>
+                    <p>Sem propaganda. Só experiência real. Descubra o livro certo antes de escolher.</p>
+                </div>
+                <div class="solucao-item">
+                    <div class="solucao-icon">👥</div>
+                    <h3>Encontre sua tribo</h3>
+                    <p>Leitores se reconhecem. Troque livros. Compartilhe mundos.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -90,24 +121,39 @@
     <section class="resenhas" id="resenhas">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Últimas Resenhas</h2>
+                <h2 class="section-title">O que os leitores estão descobrindo</h2>
                 <p class="section-subtitle">Análises periódicas feitas por leitores apaixonados</p>
+            </div>
+            <div class="resenhas-filter">
+                <button class="filter-btn active" data-filter="todos">Todos os livros</button>
+                <button class="filter-btn" data-filter="ficcao">Ficção</button>
+                <button class="filter-btn" data-filter="nao-ficcao">Não-ficção</button>
+                <button class="filter-btn" data-filter="desenvolvimento-pessoal">Desenvolvimento pessoal</button>
+                <button class="filter-btn" data-filter="filosofia">Filosofia & reflexão</button>
+                <button class="filter-btn" data-filter="carreira">Carreira & estratégia</button>
+                <button class="filter-btn" data-filter="classicos">Clássicos da literatura</button>
+                <button class="filter-btn" data-filter="iniciante">Bom para começar</button>
             </div>
             <div class="resenhas-grid">
                 <!-- Resenha Card 1 -->
-                <article class="resenha-card">
+                <article class="resenha-card" data-categoria="filosofia desenvolvimento-pessoal carreira iniciante">
                     <div class="resenha-image">
-                        <img src="capa-mente-afiada.webp" alt="Capa do livro Mente Afiada" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="capa-quietude.png" alt="Capa do livro A Quietude é a Chave" style="width: 100%; height: auto;">
                     </div>
                     <div class="resenha-content">
-                        <span class="resenha-categoria">Não-ficção</span>
-                        <h3 class="resenha-titulo">Mente Afiada - Sanjay Gupta</h3>
-                        <p class="resenha-excerpt">Você teme o declínio cognitivo? Dr. Sanjay Gupta apresenta um programa científico provando que um cérebro vibrante é alcançável em qualquer idade. Através de cinco pilares práticos, ele mostra como reverter os efeitos do tempo...</p>
+                        <div class="resenha-categorias">
+                            <span class="resenha-categoria">Filosofia & reflexão</span>
+                            <span class="resenha-categoria">Desenvolvimento pessoal</span>
+                            <span class="resenha-categoria">Carreira & estratégia</span>
+                            <span class="resenha-categoria">Bom para começar</span>
+                        </div>
+                        <h3 class="resenha-titulo">A Quietude é a Chave - Ryan Holiday</h3>
+                        <p class="resenha-excerpt">Em meio ao caos da vida moderna, os maiores pensadores da história compartilhavam um segredo: a capacidade de cultivar quietude. Ryan Holiday mostra como parar, silenciar o ruído e pensar com clareza pode ser sua maior vantagem.</p>
                         <div class="resenha-meta">
                             <span class="resenha-autor">Por Equipe AQPI</span>
-                            <span class="resenha-data">09 Nov 2025</span>
+                            <span class="resenha-data">10 Jan 2026</span>
                         </div>
-                        <a href="resenha-mente-afiada.html" class="resenha-link">Ler resenha completa →</a>
+                        <a href="resenha-quietude-chave.html" class="resenha-link">Ler resenha completa →</a>
                     </div>
                 </article>
             </div>
@@ -145,20 +191,22 @@
     <section class="trocas" id="trocas">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Livros Disponíveis para Troca</h2>
+                <h2 class="section-title">Acervo disponível agora</h2>
                 <p class="section-subtitle">Encontre seu próximo livro e compartilhe os seus</p>
             </div>
             <div class="trocas-filter">
-                <button class="filter-btn active">Todos</button>
-                <button class="filter-btn">Ficção</button>
-                <button class="filter-btn">Romance</button>
-                <button class="filter-btn">Fantasia</button>
-                <button class="filter-btn">Suspense</button>
-                <button class="filter-btn">Não-ficção</button>
+                <button class="filter-btn active" data-filter="todos">Todos os livros</button>
+                <button class="filter-btn" data-filter="ficcao">Ficção</button>
+                <button class="filter-btn" data-filter="nao-ficcao">Não-ficção</button>
+                <button class="filter-btn" data-filter="desenvolvimento-pessoal">Desenvolvimento pessoal</button>
+                <button class="filter-btn" data-filter="filosofia">Filosofia & reflexão</button>
+                <button class="filter-btn" data-filter="carreira">Carreira & estratégia</button>
+                <button class="filter-btn" data-filter="classicos">Clássicos da literatura</button>
+                <button class="filter-btn" data-filter="iniciante">Bom para começar</button>
             </div>
             <div class="trocas-grid-modern">
                 <!-- Troca Card 1 -->
-                <div class="troca-card-modern">
+                <div class="troca-card-modern" data-categoria="nao-ficcao carreira desenvolvimento-pessoal">
                     <div class="troca-image-wrapper">
                         <img src="capa-50-lei.jpg" alt="Capa do livro A 50ª Lei" class="troca-image-modern">
                         <span class="badge-disponivel">Disponível</span>
@@ -185,14 +233,14 @@
                             <p class="oferecido-por">Oferecido por <strong>Guilherme</strong></p>
                         </div>
                         <div class="troca-actions">
-                            <a href="#" class="btn-modern btn-primary-modern">Propor Troca</a>
-                            <button class="btn-modern btn-secondary-modern" data-livro="A 50ª Lei" data-autor="Robert Greene e 50 Cent">Tenho esse livro</button>
+                            <button class="btn-modern btn-primary-modern" data-livro="A 50ª Lei" data-autor="Robert Greene e 50 Cent">Usar minha ficha</button>
+                            <button class="btn-modern btn-secondary-modern" data-livro="A 50ª Lei" data-autor="Robert Greene e 50 Cent">Doar este livro</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Troca Card 2 - A Hora da Estrela -->
-                <div class="troca-card-modern">
+                <div class="troca-card-modern" data-categoria="ficcao classicos">
                     <div class="troca-image-wrapper">
                         <img src="capa-hora-estrela.webp" alt="Capa do livro A Hora da Estrela" class="troca-image-modern">
                         <span class="badge-disponivel">Disponível</span>
@@ -219,8 +267,76 @@
                             <p class="oferecido-por">Oferecido por <strong>Guilherme</strong></p>
                         </div>
                         <div class="troca-actions">
-                            <a href="#" class="btn-modern btn-primary-modern">Propor Troca</a>
-                            <button class="btn-modern btn-secondary-modern" data-livro="A Hora da Estrela" data-autor="Clarice Lispector">Tenho esse livro</button>
+                            <button class="btn-modern btn-primary-modern" data-livro="A Hora da Estrela" data-autor="Clarice Lispector">Usar minha ficha</button>
+                            <button class="btn-modern btn-secondary-modern" data-livro="A Hora da Estrela" data-autor="Clarice Lispector">Doar este livro</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Troca Card 3 - Sobre a Brevidade da Vida -->
+                <div class="troca-card-modern" data-categoria="filosofia">
+                    <div class="troca-image-wrapper">
+                        <img src="Sobre-a-brevidade-da-vida_capa-scaled.webp" alt="Capa do livro Sobre a Brevidade da Vida" class="troca-image-modern">
+                        <span class="badge-disponivel">Disponível</span>
+                    </div>
+                    <div class="troca-info-modern">
+                        <h3 class="troca-titulo-modern">Sobre a Brevidade da Vida</h3>
+                        <p class="troca-autor-modern">Sêneca</p>
+                        <div class="troca-detalhes">
+                            <div class="detalhe-item">
+                                <svg class="icon-small" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                                </svg>
+                                <span>São Bernardo do Campo, SP</span>
+                            </div>
+                            <div class="detalhe-item">
+                                <svg class="icon-small" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span>Estado: Ótimo</span>
+                            </div>
+                        </div>
+                        <div class="troca-footer">
+                            <p class="oferecido-por">Oferecido por <strong>Guilherme</strong></p>
+                        </div>
+                        <div class="troca-actions">
+                            <button class="btn-modern btn-primary-modern" data-livro="Sobre a Brevidade da Vida" data-autor="Sêneca">Usar minha ficha</button>
+                            <button class="btn-modern btn-secondary-modern" data-livro="Sobre a Brevidade da Vida" data-autor="Sêneca">Doar este livro</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Troca Card 4 - Manual de Epicteto -->
+                <div class="troca-card-modern" data-categoria="filosofia">
+                    <div class="troca-image-wrapper">
+                        <img src="capa-manual-epicteto.webp" alt="Capa do livro Manual de Epicteto" class="troca-image-modern">
+                        <span class="badge-disponivel">Disponível</span>
+                    </div>
+                    <div class="troca-info-modern">
+                        <h3 class="troca-titulo-modern">Manual de Epicteto</h3>
+                        <p class="troca-autor-modern">Epicteto</p>
+                        <div class="troca-detalhes">
+                            <div class="detalhe-item">
+                                <svg class="icon-small" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                                </svg>
+                                <span>São Bernardo do Campo, SP</span>
+                            </div>
+                            <div class="detalhe-item">
+                                <svg class="icon-small" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span>Estado: Ótimo</span>
+                            </div>
+                        </div>
+                        <div class="troca-footer">
+                            <p class="oferecido-por">Oferecido por <strong>Guilherme</strong></p>
+                        </div>
+                        <div class="troca-actions">
+                            <button class="btn-modern btn-primary-modern" data-livro="Manual de Epicteto" data-autor="Epicteto">Usar minha ficha</button>
+                            <button class="btn-modern btn-secondary-modern" data-livro="Manual de Epicteto" data-autor="Epicteto">Doar este livro</button>
                         </div>
                     </div>
                 </div>
@@ -250,30 +366,37 @@
     </section>
 
     <!-- Como Funciona Section -->
-    <section class="como-funciona">
+    <section class="como-funciona" id="como-funciona">
         <div class="container">
-            <h2 class="section-title">Como Funciona</h2>
+            <h2 class="section-title">Como trocar seu primeiro livro</h2>
             <div class="funciona-grid">
                 <div class="funciona-card">
-                    <div class="funciona-icon">1</div>
-                    <h3>Cadastre-se</h3>
-                    <p>Crie sua conta gratuitamente e junte-se à nossa comunidade de leitores</p>
+                    <div class="funciona-icon">1️⃣</div>
+                    <h3>Doe um livro que você já leu</h3>
+                    <p>Qualquer livro em bom estado. Envie fotos e detalhes.</p>
                 </div>
                 <div class="funciona-card">
-                    <div class="funciona-icon">2</div>
-                    <h3>Explore</h3>
-                    <p>Leia resenhas e encontre livros que combinam com você</p>
+                    <div class="funciona-icon">2️⃣</div>
+                    <h3>Receba sua ficha de troca</h3>
+                    <p>Analisamos o estado do livro. Se aprovado, você ganha 1 ficha.</p>
                 </div>
                 <div class="funciona-card">
-                    <div class="funciona-icon">3</div>
-                    <h3>Troque</h3>
-                    <p>Proponha trocas e compartilhe livros com outros leitores</p>
+                    <div class="funciona-icon">3️⃣</div>
+                    <h3>Escolha qualquer livro do acervo</h3>
+                    <p>Use sua ficha para pegar um livro que você quer ler.</p>
                 </div>
                 <div class="funciona-card">
-                    <div class="funciona-icon">4</div>
-                    <h3>Avalie</h3>
-                    <p>Escreva suas próprias resenhas e ajude outros leitores</p>
+                    <div class="funciona-icon">4️⃣</div>
+                    <h3>Leia, doe de novo, repita</h3>
+                    <p>Terminou? Doe e ganhe outra ficha. O ciclo continua.</p>
                 </div>
+            </div>
+
+            <!-- Box explicativo -->
+            <div class="como-funciona-box">
+                <h4>💡 Como funciona a análise?</h4>
+                <p>Você envia fotos do livro através de um formulário. Verificamos: páginas inteiras, capa preservada, sem rasgos grandes. Grifos leves são ok. Dedicatórias são ok. O importante é que seja legível e completo.</p>
+                <p><strong>Resposta em até 48 horas.</strong></p>
             </div>
         </div>
     </section>
@@ -316,7 +439,7 @@
             <div class="contato-content">
                 <div class="contato-info">
                     <h2 class="section-title">Entre em Contato</h2>
-                    <p>Tem alguma dúvida, sugestão ou quer fazer parte da nossa comunidade? Envie-nos uma mensagem!</p>
+                    <p>Tem alguma dúvida, sugestão, quer doar um livro ou quer fazer parte da nossa comunidade? Envie-nos uma mensagem!</p>
                     <div class="contato-details">
                         <div class="contato-item">
                             <span class="contato-icon"><img src="emailicon.png" alt="Email" style="width: 90px; height: 90px;"></span>
@@ -351,9 +474,19 @@
                         <label for="mensagem">Mensagem</label>
                         <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
                     </div>
+                    <p class="form-instrucao">📷 Para enviar fotos do livro, mande um email diretamente para <strong>contato.aqpi@gmail.com</strong></p>
                     <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
                 </form>
             </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-final">
+        <div class="container">
+            <h2>Doe seu primeiro livro hoje</h2>
+            <p>Comece sua jornada. Faça parte do movimento.</p>
+            <a href="#contato" class="btn btn-large btn-primary">Começar minha jornada</a>
         </div>
     </section>
 
@@ -385,7 +518,7 @@
                 </div>
                 <div class="footer-section">
                     <h4>Newsletter</h4>
-                    <p>Receba nossas resenhas semanais</p>
+                    <p>Receba nossas resenhas periódicas.</p>
                     <form class="newsletter-form">
                         <input type="email" placeholder="Seu email">
                         <button type="submit" class="btn btn-small">Inscrever</button>
