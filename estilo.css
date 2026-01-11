@@ -298,38 +298,21 @@ p b {
 
 .hero-title {
     font-family: 'Inter', sans-serif;
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     font-weight: 800;
     margin-bottom: 1.5rem;
     transform-style: preserve-3d;
     cursor: default;
     text-align: center;
-    line-height: 1.1;
+    line-height: 1.2;
     letter-spacing: -0.03em;
 }
 
-.hero-title .palavra {
-    display: inline-block;
-    opacity: 0;
-    animation: fadeInWord 0.8s ease forwards;
-    margin-right: 0.15em;
-    font-weight: 800;
-}
-
-@keyframes fadeInWord {
-    0% {
-        opacity: 0;
-        transform: translateY(30px) scale(0.95);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
+/* Animação de palavras removida - hero-title agora é estático */
 
 .hero-subtitle {
     font-family: 'Inter', sans-serif;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.85);
     line-height: 1.6;
@@ -370,17 +353,21 @@ p b {
     border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.stat h3 {
+.stat h3,
+.stat-number {
     font-size: 2.5rem;
     color: var(--secondary-color);
     margin-bottom: 0.3rem;
+    display: block;
 }
 
-.stat p {
+.stat p,
+.stat-label {
     font-size: 0.95rem;
     opacity: 0.85;
     font-weight: 400;
     color: white;
+    display: block;
 }
 
 /* Buttons */
@@ -535,12 +522,13 @@ p b {
 
 .resenha-image {
     width: 100%;
-    height: 280px;
+    height: 500px;
     background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     position: relative;
+    overflow: hidden;
 }
 
 .placeholder-image {
@@ -551,17 +539,23 @@ p b {
     padding: 2rem;
 }
 
+.resenha-categorias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
 .resenha-categoria {
     display: inline-block;
     background-color: var(--primary-color);
     color: white;
-    padding: 0.4rem 1rem;
+    padding: 0.35rem 0.8rem;
     border-radius: 30px;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 600;
-    margin-bottom: 1.25rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.03em;
 }
 
 .resenha-titulo {
@@ -611,6 +605,7 @@ p b {
     background-color: var(--background-light);
 }
 
+.resenhas-filter,
 .trocas-filter {
     display: flex;
     justify-content: center;
@@ -841,13 +836,13 @@ p b {
 .funciona-icon {
     width: 70px;
     height: 70px;
-    background-color: var(--secondary-color);
+    background-color: var(--background-light);
     color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-weight: 700;
     margin: 0 auto 1.5rem;
 }
@@ -1032,6 +1027,16 @@ p b {
 .form-group textarea {
     resize: vertical;
     min-height: 140px;
+}
+
+.form-instrucao {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    background-color: var(--background-light);
+    padding: 1rem 1.25rem;
+    border-radius: var(--border-radius-sm);
+    border-left: 3px solid var(--secondary-color);
+    margin-bottom: 1.5rem;
 }
 
 /* Footer */
@@ -1717,6 +1722,159 @@ html {
     color: var(--primary-color);
 }
 
+/* ===== HERO TRUST BADGES ===== */
+.hero-trust {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.trust-badges {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.trust-badge {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+
+.trust-text {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
+/* ===== SEÇÃO DOR ===== */
+.secao-dor {
+    padding: 60px 0;
+    background-color: var(--background-light);
+}
+
+.dor-texto {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #1a1a1a;
+    max-width: 900px;
+    margin: 2rem auto 0;
+    text-align: center;
+}
+
+/* ===== SEÇÃO SOLUÇÃO ===== */
+.secao-solucao {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.solucao-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.solucao-item {
+    text-align: center;
+}
+
+.solucao-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.solucao-item h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.solucao-item p {
+    font-size: 1rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* ===== COMO FUNCIONA BOX ===== */
+.como-funciona-box {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-top: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.como-funciona-box h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.como-funciona-box p {
+    margin-bottom: 0.75rem;
+    line-height: 1.7;
+}
+
+.como-funciona-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* ===== CTA FINAL ===== */
+.cta-final {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #0d2436 100%);
+    text-align: center;
+    color: white;
+}
+
+.cta-final h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.cta-final p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.btn-large {
+    padding: 1.2rem 3rem;
+    font-size: 1.125rem;
+}
+
+/* ===== RESPONSIVIDADE NOVAS SEÇÕES ===== */
+@media (max-width: 768px) {
+    .trust-badges {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .dor-texto {
+        font-size: 1.125rem;
+    }
+
+    .solucao-grid {
+        gap: 2rem;
+    }
+
+    .como-funciona-box {
+        padding: 1.5rem;
+    }
+
+    .cta-final h2 {
+        font-size: 2rem;
+    }
+}
+
 /* ===== RESPONSIVIDADE TIPOGRAFIA ===== */
 @media (max-width: 768px) {
     h1, .hero-title {
@@ -1756,6 +1914,390 @@ html {
 
     h2, .section-title {
         font-size: 1.75rem;
+    }
+}
+
+/* ========================================
+   PÁGINAS DE RESENHA
+   ======================================== */
+
+/* Cabeçalho com Capa Centralizada */
+.resenha-header {
+    padding: 120px 0 60px;
+    background-color: white;
+}
+
+.resenha-header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.resenha-header-image {
+    max-width: 280px;
+    margin-bottom: 2rem;
+}
+
+.resenha-header-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.resenha-header-categorias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.resenha-header-categoria {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.resenha-header-titulo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.resenha-header-autor {
+    font-size: 1.25rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.resenha-header-meta {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    font-size: 0.95rem;
+    color: var(--text-light);
+}
+
+.resenha-header-meta .meta-separador {
+    color: var(--border-color);
+}
+
+/* Banner Azul de Introdução */
+.resenha-intro-banner {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #0d2436 100%);
+    padding: 60px 0;
+    color: white;
+}
+
+.resenha-intro-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.resenha-intro-titulo {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.resenha-intro-texto {
+    font-size: 1.25rem;
+    line-height: 1.9;
+    opacity: 0.95;
+    margin: 0;
+}
+
+/* Hero Banner Azul (legado - manter para compatibilidade) */
+.resenha-hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #0d2436 100%);
+    padding: 120px 0 80px;
+    color: white;
+}
+
+.resenha-hero-content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.resenha-hero-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.resenha-hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.resenha-hero-intro {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    opacity: 0.95;
+}
+
+/* Seções da Resenha */
+.resenha-secao {
+    padding: 60px 0;
+}
+
+.resenha-secao:nth-child(even) {
+    background-color: var(--background-light);
+}
+
+.resenha-secao-titulo {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* A Quem Interessa */
+.interesse-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.interesse-intro {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.interesse-lista {
+    list-style: none;
+    padding: 0;
+}
+
+.interesse-lista li {
+    padding: 1rem 0;
+    padding-left: 2rem;
+    position: relative;
+    font-size: 1.125rem;
+    line-height: 1.7;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.interesse-lista li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.interesse-lista li:last-child {
+    border-bottom: none;
+}
+
+/* Sobre o Livro */
+.sobre-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.sobre-content p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+}
+
+.sobre-pilares {
+    list-style: none;
+    padding: 2rem;
+    margin: 2rem 0;
+    background: var(--background-light);
+    border-radius: 15px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.sobre-pilares li {
+    padding: 0.75rem 0;
+    font-size: 1.125rem;
+    line-height: 1.7;
+}
+
+.sobre-pilares strong {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* Citações */
+.citacoes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.citacao-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid var(--secondary-color);
+}
+
+.citacao-texto {
+    font-size: 1.125rem;
+    font-style: italic;
+    line-height: 1.7;
+    color: var(--primary-color);
+    margin: 0 0 1rem 0;
+    font-weight: 500;
+}
+
+.citacao-contexto {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-light);
+    margin: 0;
+}
+
+.citacao-contexto strong {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+/* Ficha Técnica */
+.ficha-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.ficha-grid {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.ficha-item {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.ficha-item:last-child {
+    border-bottom: none;
+}
+
+.ficha-label {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.ficha-valor {
+    color: var(--text-dark);
+}
+
+/* CTA Final */
+.resenha-cta {
+    padding: 60px 0;
+    background: var(--background-light);
+    text-align: center;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Responsividade Resenha */
+@media (max-width: 768px) {
+    .resenha-header {
+        padding: 100px 0 40px;
+    }
+
+    .resenha-header-image {
+        max-width: 200px;
+    }
+
+    .resenha-header-titulo {
+        font-size: 2rem;
+    }
+
+    .resenha-header-autor {
+        font-size: 1.1rem;
+    }
+
+    .resenha-header-meta {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .resenha-intro-banner {
+        padding: 40px 0;
+    }
+
+    .resenha-intro-texto {
+        font-size: 1.1rem;
+    }
+
+    .resenha-hero {
+        padding: 100px 0 60px;
+    }
+
+    .resenha-hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .resenha-hero-image {
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    .resenha-hero-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .resenha-hero-intro {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .resenha-secao-titulo {
+        font-size: 1.75rem;
+    }
+
+    .citacoes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ficha-item {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
     }
 }
 
