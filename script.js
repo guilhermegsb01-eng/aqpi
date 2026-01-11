@@ -59,28 +59,52 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Filtros de Trocas
-const filterButtons = document.querySelectorAll('.filter-btn');
-const trocaCards = document.querySelectorAll('.troca-card-modern');
+// Filtros de Resenhas
+const resenhasFilterButtons = document.querySelectorAll('.resenhas-filter .filter-btn');
+const resenhaCards = document.querySelectorAll('.resenha-card');
 
-filterButtons.forEach(button => {
+resenhasFilterButtons.forEach(button => {
     button.addEventListener('click', () => {
-        // Remove active de todos os botões
-        filterButtons.forEach(btn => btn.classList.remove('active'));
+        // Remove active de todos os botões da seção
+        resenhasFilterButtons.forEach(btn => btn.classList.remove('active'));
         // Adiciona active no botão clicado
         button.classList.add('active');
-        
-        const filterValue = button.textContent.toLowerCase();
-        
+
+        const filterValue = button.getAttribute('data-filter');
+
+        // Filtra os cards
+        resenhaCards.forEach(card => {
+            const categorias = card.getAttribute('data-categoria') || '';
+            if (filterValue === 'todos' || categorias.includes(filterValue)) {
+                card.style.display = 'block';
+                card.style.opacity = '1';
+                card.style.animation = 'fadeInUp 0.5s ease';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+});
+
+// Filtros de Trocas
+const trocasFilterButtons = document.querySelectorAll('.trocas-filter .filter-btn');
+const trocaCards = document.querySelectorAll('.troca-card-modern');
+
+trocasFilterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove active de todos os botões da seção
+        trocasFilterButtons.forEach(btn => btn.classList.remove('active'));
+        // Adiciona active no botão clicado
+        button.classList.add('active');
+
+        const filterValue = button.getAttribute('data-filter');
+
         // Filtra os cards
         trocaCards.forEach(card => {
-            const categoria = card.querySelector('.resenha-categoria');
-            if (filterValue === 'todos') {
+            const categorias = card.getAttribute('data-categoria') || '';
+            if (filterValue === 'todos' || categorias.includes(filterValue)) {
                 card.style.display = 'block';
-                // Animação de entrada
-                card.style.animation = 'fadeInUp 0.5s ease';
-            } else if (categoria && categoria.textContent.toLowerCase() === filterValue) {
-                card.style.display = 'block';
+                card.style.opacity = '1';
                 card.style.animation = 'fadeInUp 0.5s ease';
             } else {
                 card.style.display = 'none';
@@ -97,7 +121,7 @@ if (newsletterForm) {
     newsletterForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const email = newsletterForm.querySelector('input').value;
-        alert(`Obrigado por se inscrever! Você receberá nossas resenhas semanais em: ${email}`);
+        alert(`Obrigado por se inscrever! Você receberá nossas resenhas periódicas em: ${email}`);
         newsletterForm.reset();
     });
 }
@@ -193,10 +217,10 @@ const heroObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             const stats = document.querySelectorAll('.stat h3');
-            // Animação para os números 1, 1, 2
+            // Animação para os números 1, 4, 2
             if (stats.length >= 3) {
                 stats[0].innerHTML = '1';
-                stats[1].innerHTML = '1';
+                stats[1].innerHTML = '4';
                 stats[2].innerHTML = '2';
             }
             heroObserver.unobserve(entry.target);
@@ -276,4 +300,3 @@ if (backToTopBtn) {
         });
     });
 }
-
